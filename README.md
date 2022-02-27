@@ -32,9 +32,11 @@
 
 <br />
 
-<a align="center" href="https://portfolio-nathanssantos.vercel.app/">
-  My portfolio
-</a>
+<h4 align="center">
+  <a href="https://portfolio-nathanssantos.vercel.app/">
+    My portfolio
+  </a>
+</h4>
 
 <br />
 <br />
