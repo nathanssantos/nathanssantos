@@ -20,7 +20,6 @@
 
 <div align="center">
   <a href="https://github.com/nathanssantos?tab=repositories">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=nathanssantos&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
     <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nathanssantos&hide=html&layout=compact&theme=dark"/>
   </a>
 </div>
