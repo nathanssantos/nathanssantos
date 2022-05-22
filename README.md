@@ -31,8 +31,7 @@
   Take a look at 
   <a href="https://portfolio-nathanssantos.vercel.app/">
     my portfolio
-  </a>
-  !
+  </a>!
 </h4>
 
 <br />
