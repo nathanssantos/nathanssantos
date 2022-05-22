@@ -28,9 +28,11 @@
 <br />
 
 <h4 align="center">
+  Take a look at 
   <a href="https://portfolio-nathanssantos.vercel.app/">
-    My portfolio
+    my portfolio
   </a>
+  !
 </h4>
 
 <br />
