@@ -28,13 +28,9 @@
 <br />
 
 <h4 align="center">
-  Take a look at 
-  <a href="https://portfolio-nathanssantos.vercel.app/">
-    my portfolio
-  </a>!
+  Take a look at <a href="https://portfolio-nathanssantos.vercel.app/">my portfolio</a>!
 </h4>
 
-<br />
 <br />
 <br />
 
