@@ -55,10 +55,6 @@
     <img align="center" alt="Electron.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" />
   </a>
 
-  <a href="https://sass-lang.com/">
-    <img align="center" alt="Sass" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-  </a>
-
   <a href="https://nodejs.org/">
     <img align="center" alt="Node.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
   </a>
