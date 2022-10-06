@@ -16,7 +16,6 @@
 <p align="center">Front-end engineer with 4 years of experience specializing in building high-quality digital products.<br />Passionate about learning, applying new technologies, and constantly improving my skills. As a developer, I aim to write clean code which can be easily read, tested, maintained, reused, and extended. I am highly committed to my work, always doing my best to push initiatives to successful completion.</p>
 
 <br />
-<br />
 
 <h4 align="center">
   Take a look at <a href="https://portfolio-nathanssantos.vercel.app/">my portfolio</a>!
