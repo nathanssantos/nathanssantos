@@ -18,15 +18,6 @@
 <br />
 <br />
 
-<div align="center">
-  <a href="https://github.com/nathanssantos?tab=repositories">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nathanssantos&hide=html,css,scss,shell&layout=compact&theme=dark"/>
-  </a>
-</div>
-
-<br />
-<br />
-
 <h4 align="center">
   Take a look at <a href="https://portfolio-nathanssantos.vercel.app/">my portfolio</a>!
 </h4>
