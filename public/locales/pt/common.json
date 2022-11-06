@@ -1,9 +1,1 @@
-{
-  "back-to-home": "Voltar à página inicial",
-  "change-locale": "Trocar linguagem",
-  "error-with-status": "Aconteceu um erro {{statusCode}} no servidor",
-  "error-without-status": "Aconteceu um erro sem código no servidor",
-  "h1": "Um exemplo simples",
-  "title": "Página inicial",
-  "to-second-page": "Para a segunda página"
-}
+{}
