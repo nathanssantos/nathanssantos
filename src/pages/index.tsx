@@ -27,7 +27,7 @@ const Homepage = (_props: InferGetStaticPropsType<typeof getServerSideProps>) =>
       <main>
         <Header heading={t('h1')} title={t('title')} />
 
-        <Flex gap={4}>
+        <Flex gap={3}>
           <Button onClick={() => onToggleLanguageClick(changeTo)}>
             {t('change-locale', { changeTo })}
           </Button>
