@@ -1,7 +1,14 @@
 type Repository = {
+  id: number;
   name: string;
-  type: string;
-  updated_at?: string;
-  views?: number;
-  downloads?: number;
+  description?: string;
+  stargazers_count?: number;
+  language: string;
+  license?: {
+    key: string;
+    name: string;
+    spdx_id: string;
+  };
+  homepage?: string;
+  html_url: string;
 };
