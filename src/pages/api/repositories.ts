@@ -3,9 +3,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const { GITHUB_USERNAME } = process.env;
 
-type MessageResponse = { message: String };
+type Message = { message: String };
 
-type Data = Repository[] | MessageResponse;
+type Data = Repository[] | Message;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   try {
