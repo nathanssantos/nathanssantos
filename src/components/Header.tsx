@@ -3,7 +3,7 @@ import {
   Flex,
   Icon,
   IconButton,
-  Menu,
+  Menu as ChakraMenu,
   MenuButton,
   MenuItem,
   MenuList,
@@ -13,6 +13,7 @@ import {
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { RiTranslate, RiMoonLine, RiSunLine } from 'react-icons/ri';
+import { Drawer, Menu } from '.';
 
 const Header = () => {
   const { t } = useTranslation('header');
@@ -26,38 +27,14 @@ const Header = () => {
 
   return (
     <Flex as='header' align='center' justify='space-between' p={4} gap={2}>
-      <nav>
-        <Flex as='ul' listStyleType='none' gap={2}>
-          <li>
-            <Button size='sm' variant='ghost'>
-              {t('about')}
-            </Button>
-          </li>
-          <li>
-            <Button size='sm' variant='ghost'>
-              {t('experience')}
-            </Button>
-          </li>
-          <li>
-            <Button size='sm' variant='ghost'>
-              {t('projects')}
-            </Button>
-          </li>
-          <li>
-            <Button size='sm' variant='ghost'>
-              {t('contact')}
-            </Button>
-          </li>
-          <li>
-            <Button size='sm' variant='outline'>
-              {t('resume')}
-            </Button>
-          </li>
-        </Flex>
-      </nav>
-
+      <Flex display={{ md: 'none' }}>
+        <Drawer />
+      </Flex>
+      <Flex display={{ base: 'none', md: 'initial' }}>
+        <Menu />
+      </Flex>
       <Flex align='center' gap={2}>
-        <Menu>
+        <ChakraMenu>
           <Tooltip hasArrow label={t('select-language')} offset={[0, 16]}>
             <MenuButton
               as={Button}
@@ -81,7 +58,7 @@ const Header = () => {
               Português
             </MenuItem>
           </MenuList>
-        </Menu>
+        </ChakraMenu>
         <Tooltip
           hasArrow
           label={colorMode === 'light' ? t('turn-off-the-light') : t('turn-on-the-light')}
