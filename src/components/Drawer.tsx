@@ -1,13 +1,12 @@
 import {
+  Drawer as ChakraDrawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+  Icon,
   IconButton,
   useDisclosure,
-  Drawer as ChakraDrawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerBody,
-  DrawerFooter,
-  Icon,
 } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';
 import { Menu } from '.';
