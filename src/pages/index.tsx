@@ -4,8 +4,9 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 
-import { Footer, Header } from '@/components';
+import { Footer, Header, Hero } from '@/components';
 import axios from 'axios';
+import Head from 'next/head';
 
 type HomeProps = {
   repositories: Repository[];
@@ -16,13 +17,19 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
 
   return (
     <>
+      <Head>
+        <title>Nathan S. Santos</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta property='og:title' content='Nathan S. Santos' key='title' />
+      </Head>
       <Header />
       <main>
-        <Flex direction='column' gap={3}>
+        <Hero />
+        {/* <Flex direction='column' gap={3}>
           {repositories.map(({ id, name }) => (
             <Flex key={id}>{name}</Flex>
           ))}
-        </Flex>
+        </Flex> */}
       </main>
       <Footer />
     </>
@@ -33,6 +40,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale
   const localeData = await serverSideTranslations(locale ?? 'en', [
     'common',
     'header',
+    'hero',
     'footer',
   ]);
 

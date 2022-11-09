@@ -1,7 +1,4 @@
 const button = {
-  baseStyle: {
-    fontWeight: 400,
-  },
   defaultProps: {
     variant: 'primary',
   },
