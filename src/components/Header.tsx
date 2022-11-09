@@ -26,7 +26,15 @@ const Header = () => {
   };
 
   return (
-    <Flex as='header' align='center' justify='space-between' p={4} gap={2}>
+    <Flex
+      as='header'
+      position='sticky'
+      top={0}
+      align='center'
+      justify='space-between'
+      p={4}
+      gap={2}
+    >
       <Flex display={{ md: 'none' }}>
         <Drawer />
       </Flex>
