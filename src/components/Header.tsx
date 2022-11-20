@@ -34,6 +34,7 @@ const Header = () => {
       justify='space-between'
       p={4}
       gap={2}
+      fontFamily='Roboto Mono'
     >
       <Flex display={{ md: 'none' }}>
         <Drawer />
@@ -49,6 +50,7 @@ const Header = () => {
               variant='ghost'
               leftIcon={<Icon as={RiTranslate} />}
               size='sm'
+              fontWeight={400}
             >
               {router.locale?.toUpperCase()}
             </MenuButton>

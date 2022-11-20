@@ -12,27 +12,27 @@ const Menu = ({ vertical = false }: MenuProps) => {
     <Box as='nav'>
       <Flex as='ul' direction={vertical ? 'column' : 'row'} listStyleType='none' gap={2}>
         <li>
-          <Button size='sm' variant='ghost'>
+          <Button size='sm' variant='ghost' fontWeight={500}>
             {t('about')}
           </Button>
         </li>
         <li>
-          <Button size='sm' variant='ghost'>
+          <Button size='sm' variant='ghost' fontWeight={500}>
             {t('experience')}
           </Button>
         </li>
         <li>
-          <Button size='sm' variant='ghost'>
+          <Button size='sm' variant='ghost' fontWeight={500}>
             {t('projects')}
           </Button>
         </li>
         <li>
-          <Button size='sm' variant='ghost'>
+          <Button size='sm' variant='ghost' fontWeight={500}>
             {t('contact')}
           </Button>
         </li>
         <li>
-          <Button size='sm' variant='ghost'>
+          <Button size='sm' variant='ghost' fontWeight={500}>
             {t('resume')}
           </Button>
         </li>
