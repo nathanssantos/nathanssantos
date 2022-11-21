@@ -48,7 +48,7 @@ const Hero = () => {
               color: colorMode === 'dark' ? '#aaa' : '#333',
               distance: 150,
               enable: true,
-              opacity: 0.05,
+              opacity: 0.06,
               width: 1,
             },
             collisions: {
@@ -72,7 +72,7 @@ const Hero = () => {
               value: 100,
             },
             opacity: {
-              value: 0.05,
+              value: 0.06,
             },
             shape: {
               type: 'circle',

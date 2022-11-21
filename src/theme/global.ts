@@ -5,7 +5,7 @@ const global = (props: StyleFunctionProps) => ({
     scrollBehavior: 'smooth',
   },
   body: {
-    bg: mode('#fefefe', '#222')(props),
+    bg: mode('#f0f0f0', '#222')(props),
     fontFamily: `Inter, sans-serif`,
   },
 });
