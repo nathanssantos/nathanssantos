@@ -5,8 +5,8 @@ const Footer = () => {
   const { t } = useTranslation('footer');
 
   return (
-    <Flex as='footer' align='center' justify='center' py={16}>
-      <Text as='p' fontSize='sm'>
+    <Flex as='footer' align='center' justify='center' py={16} fontFamily='Roboto Mono'>
+      <Text as='p' fontSize='xs'>
         {t('description')}
       </Text>
     </Flex>

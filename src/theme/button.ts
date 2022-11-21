@@ -1,6 +1,7 @@
 const button = {
   defaultProps: {
     variant: 'primary',
+    fontWeight: 400,
   },
   sizes: {
     md: {
