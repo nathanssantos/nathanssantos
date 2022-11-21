@@ -1,6 +1,5 @@
 import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import React from 'react';
 
 const Hero = () => {
   const { t } = useTranslation('hero');
@@ -22,6 +21,7 @@ const Hero = () => {
           fontSize={{ base: 'md', md: 'lg' }}
           fontWeight={500}
           fontFamily='Roboto Mono'
+          color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
           mb={{ base: 1, md: 2 }}
         >
           {t('salutation')}
@@ -37,10 +37,10 @@ const Hero = () => {
                 : 'linear-gradient( 120deg, var(--chakra-colors-blue-500) 50%, var(--chakra-colors-teal-500) 90%)'
             }
             sx={{
-              'background-clip': 'text',
-              'text-fill-color': 'transparent',
-              '-webkit-background-clip': 'text',
-              '-webkit-text-fill-color': 'transparent',
+              backgroundClip: 'text',
+              textFillColor: 'transparent',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
             }}
           >
             {t('name')}.
@@ -50,16 +50,12 @@ const Hero = () => {
           fontSize={{ base: '2xl', md: '5xl' }}
           fontWeight='bold'
           lineHeight={1}
-          mb={{ base: 4, md: 6 }}
+          mb={{ base: 3, md: 6 }}
           ml='-0.05rem'
         >
           {t('conclusion')}.
         </Text>
-        <Text
-          fontWeight='thin'
-          fontSize={{ base: 'sm', md: 'md' }}
-          maxW={{ base: '25rem', md: '28.5rem' }}
-        >
+        <Text fontSize={{ base: 'sm', md: 'md' }} maxW={{ base: '25.5rem', md: '29rem' }}>
           {t('description')} <Text as='span'>{t('company')}.</Text>
         </Text>
       </Container>

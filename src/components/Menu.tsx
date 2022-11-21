@@ -9,7 +9,7 @@ const Menu = ({ vertical = false }: MenuProps) => {
   const { t } = useTranslation('header');
 
   return (
-    <Box as='nav'>
+    <Box as='nav' fontFamily='Roboto Mono'>
       <Flex as='ul' direction={vertical ? 'column' : 'row'} listStyleType='none' gap={2}>
         <li>
           <Button size='sm' variant='ghost' fontWeight={500}>

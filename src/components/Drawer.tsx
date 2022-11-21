@@ -20,14 +20,14 @@ const Drawer = () => {
         variant='ghost'
         size='sm'
         aria-label='Menu'
-        icon={<Icon as={RiMenuLine} />}
+        icon={<Icon as={RiMenuLine} w={4} h={4} />}
         onClick={onOpen}
       />
       <ChakraDrawer isOpen={isOpen} placement='left' onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent boxShadow='0px 8px 20px -2px rgba(0, 0, 0, 0.08)'>
           <DrawerCloseButton />
-          <DrawerBody>
+          <DrawerBody pt={8}>
             <Menu vertical />
           </DrawerBody>
         </DrawerContent>

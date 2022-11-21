@@ -34,7 +34,9 @@ const Header = () => {
       justify='space-between'
       p={4}
       gap={2}
-      fontFamily='Roboto Mono'
+      bg={colorMode === 'dark' ? 'rgba(34, 34, 34, 0.75)' : 'rgba(254, 254, 254, 0.75)'}
+      backdropFilter='blur(0.313rem)'
+      zIndex={1}
     >
       <Flex display={{ md: 'none' }}>
         <Drawer />
@@ -48,7 +50,7 @@ const Header = () => {
             <MenuButton
               as={Button}
               variant='ghost'
-              leftIcon={<Icon as={RiTranslate} />}
+              leftIcon={<Icon as={RiTranslate} w={4} h={4} />}
               size='sm'
               fontWeight={400}
             >
@@ -80,7 +82,13 @@ const Header = () => {
               colorMode === 'light' ? t('turn-off-the-light') : t('turn-on-the-light')
             }
             size='sm'
-            icon={colorMode === 'light' ? <Icon as={RiMoonLine} /> : <Icon as={RiSunLine} />}
+            icon={
+              colorMode === 'light' ? (
+                <Icon as={RiMoonLine} w={4} h={4} />
+              ) : (
+                <Icon as={RiSunLine} w={4} h={4} />
+              )
+            }
             onClick={toggleColorMode}
           />
         </Tooltip>

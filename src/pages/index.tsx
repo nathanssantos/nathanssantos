@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 
-import { Footer, Header, Hero } from '@/components';
+import { About, Background, Footer, Header, Hero } from '@/components';
 import axios from 'axios';
 import Head from 'next/head';
 
@@ -24,12 +24,9 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
       </Head>
       <Header />
       <main>
+        <Background />
         <Hero />
-        {/* <Flex direction='column' gap={3}>
-          {repositories.map(({ id, name }) => (
-            <Flex key={id}>{name}</Flex>
-          ))}
-        </Flex> */}
+        <About />
       </main>
       <Footer />
     </>
@@ -41,6 +38,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale
     'common',
     'header',
     'hero',
+    'about',
     'footer',
   ]);
 

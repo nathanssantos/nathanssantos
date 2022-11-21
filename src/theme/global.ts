@@ -6,7 +6,7 @@ const global = (props: StyleFunctionProps) => ({
   },
   body: {
     bg: mode('#fefefe', '#222')(props),
-    fontFamily: `'Inter', sans-serif`,
+    fontFamily: `Inter, sans-serif`,
   },
 });
 
