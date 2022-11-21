@@ -22,11 +22,11 @@ const Hero = () => {
           fontSize={{ base: 'md', md: 'lg' }}
           fontWeight={500}
           fontFamily='Roboto Mono'
-          mb={2}
+          mb={{ base: 1, md: 2 }}
         >
           {t('salutation')}
         </Text>
-        <Flex ml='-0.2rem' mb={2}>
+        <Flex ml='-0.15rem' mb={2}>
           <Text
             fontSize={{ base: '5xl', md: '7xl' }}
             fontWeight='bold'
@@ -47,11 +47,11 @@ const Hero = () => {
           </Text>
         </Flex>
         <Text
-          fontSize={{ base: '3xl', md: '5xl' }}
+          fontSize={{ base: '2xl', md: '5xl' }}
           fontWeight='bold'
           lineHeight={1}
           mb={{ base: 4, md: 6 }}
-          ml='-0.1rem'
+          ml='-0.05rem'
         >
           {t('conclusion')}.
         </Text>
