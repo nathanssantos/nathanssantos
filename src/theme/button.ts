@@ -13,6 +13,11 @@ const button = {
     },
   },
   variants: {
+    ghost: {
+      _hover: {
+        bg: 'gray.200',
+      },
+    },
     primary: {
       borderRadius: '0.25rem',
       bg: 'blue.500',
