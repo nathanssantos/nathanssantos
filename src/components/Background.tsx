@@ -1,9 +1,9 @@
-import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
+import { Flex, useColorMode } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
-import type { Container as ParticlesContainer, Engine } from 'tsparticles-engine';
+import type { Engine } from 'tsparticles-engine';
 
 const Hero = () => {
   const { t } = useTranslation('hero');
@@ -29,14 +29,21 @@ const Hero = () => {
             events: {
               onHover: {
                 enable: true,
-                mode: 'repulse',
+                mode: 'grab',
+                parallax: {
+                  enable: true,
+                  smooth: 10,
+                  force: 15,
+                },
               },
               resize: true,
             },
             modes: {
-              repulse: {
-                distance: 100,
-                duration: 0.4,
+              grab: {
+                distance: 300,
+                line_linked: {
+                  opacity: 0.075,
+                },
               },
             },
           },
@@ -48,7 +55,7 @@ const Hero = () => {
               color: colorMode === 'dark' ? '#aaa' : '#333',
               distance: 150,
               enable: true,
-              opacity: 0.06,
+              opacity: 0.075,
               width: 1,
             },
             collisions: {
@@ -72,13 +79,13 @@ const Hero = () => {
               value: 100,
             },
             opacity: {
-              value: 0.06,
+              value: 0.075,
             },
             shape: {
               type: 'circle',
             },
             size: {
-              value: { min: 2, max: 4 },
+              value: { min: 1, max: 2 },
             },
           },
           detectRetina: true,
