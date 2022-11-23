@@ -13,8 +13,6 @@ type HomeProps = {
 };
 
 const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  const { t } = useTranslation('common');
-
   return (
     <>
       <Head>
