@@ -55,6 +55,7 @@ const Header = () => {
                 leftIcon={<Icon as={RiTranslate} w={4} h={4} />}
                 size='sm'
                 fontWeight={400}
+                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               >
                 {router.locale?.toUpperCase()}
               </MenuButton>
@@ -84,6 +85,7 @@ const Header = () => {
                 colorMode === 'light' ? t('turn-off-the-light') : t('turn-on-the-light')
               }
               size='sm'
+              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               icon={
                 colorMode === 'light' ? (
                   <Icon as={RiMoonLine} w={4} h={4} />
