@@ -1,8 +1,26 @@
-import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
+import {
+  Box,
+  BoxProps,
+  chakra,
+  Container,
+  Flex,
+  Text,
+  useColorMode,
+  shouldForwardProp,
+} from '@chakra-ui/react';
+import { motion, isValidMotionProp } from 'framer-motion';
+import { observer } from 'mobx-react';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useStore } from 'src/hooks';
+
+const ChakraBox = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 const Hero = () => {
   const { t } = useTranslation('hero');
@@ -11,6 +29,7 @@ const Hero = () => {
   const nameRef = useRef(null);
 
   const { toggle } = uiStore.logo;
+  const { isOpen } = uiStore.scrollIcon;
 
   useEffect(() => {
     if (!nameRef.current) return;
@@ -35,7 +54,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <Flex height='calc(100vh - 4rem)'>
+    <Flex position='relative' height='calc(100vh - 4.813rem)'>
       <Container
         w='full'
         maxW='container.xl'
@@ -89,10 +108,43 @@ const Hero = () => {
           <Text fontSize={{ base: 'sm', md: 'md' }} maxW={{ base: '25.5rem', md: '29rem' }}>
             {t('description')} <Text as='span'>{t('company')}.</Text>
           </Text>
+          <Flex
+            position='absolute'
+            left='50%'
+            transform='translateX(-50%)'
+            bottom={8}
+            width='1.25rem'
+            height='1.875rem'
+            boxShadow={`inset 0 0 0 0.063rem ${colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'}`}
+            borderRadius='1.563rem'
+            transition='0.25s'
+            opacity={isOpen ? 1 : 0}
+          >
+            <ChakraBox
+              position='absolute'
+              left='50%'
+              transform='translateX(-50%)'
+              display='flex'
+              width='1'
+              height='2'
+              bg={colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'}
+              borderRadius='1.563rem'
+              animate={{
+                top: ['0.35rem', '0.55rem', '0.35rem'],
+              }}
+              // @ts-ignore
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+                repeat: Infinity,
+                repeatType: 'loop',
+              }}
+            />
+          </Flex>
         </Fade>
       </Container>
     </Flex>
   );
 };
 
-export default Hero;
+export default observer(Hero);

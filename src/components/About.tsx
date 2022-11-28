@@ -1,12 +1,39 @@
 import { Avatar, Container, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { useStore } from 'src/hooks';
 import SectionHeader from './SectionHeader';
 
 const About = () => {
   const { t } = useTranslation('about');
   const { colorMode } = useColorMode();
+  const avatarRef = useRef(null);
+  const { uiStore } = useStore();
+
+  const { toggle } = uiStore.scrollIcon;
+
+  useEffect(() => {
+    if (!avatarRef.current) return;
+
+    const nameElement = avatarRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => toggle(entry.isIntersecting));
+      },
+      {
+        root: null,
+        threshold: 0,
+      },
+    );
+
+    observer.observe(nameElement);
+
+    return () => {
+      observer.observe(nameElement);
+    };
+  }, []);
 
   return (
     <Flex>
@@ -31,6 +58,7 @@ const About = () => {
               src='/images/me.jpg'
               filter='grayscale(100%) contrast(1.25)'
               alignSelf={{ base: 'center', md: 'flex-start' }}
+              ref={avatarRef}
             />
             <Flex direction='column' gap={4}>
               <Text>{t('description')}</Text>
