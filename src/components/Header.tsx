@@ -7,23 +7,34 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Text,
   Tooltip,
   useColorMode,
 } from '@chakra-ui/react';
+import { observer } from 'mobx-react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { RiTranslate, RiMoonLine, RiSunLine } from 'react-icons/ri';
+import { RiMoonLine, RiSunLine, RiTranslate } from 'react-icons/ri';
+import { useStore } from 'src/hooks';
 import { Drawer, Menu } from '.';
 
 const Header = () => {
   const { t } = useTranslation('header');
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
+  const { uiStore } = useStore();
+
+  const { isOpen } = uiStore.logo;
 
   const handleChangeLanguage = (locale: 'en' | 'pt') => {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale });
+  };
+
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -39,11 +50,42 @@ const Header = () => {
       backdropFilter='blur(0.313rem)'
       zIndex={1}
     >
-      <Flex display={{ md: 'none' }}>
-        <Drawer />
-      </Flex>
-      <Flex display={{ base: 'none', md: 'initial' }}>
-        <Menu />
+      <Flex align='center'>
+        <Flex align='center'>
+          <Flex
+            maxW={isOpen ? '2.8125rem' : 0}
+            mr={isOpen ? 6 : 0}
+            opacity={isOpen ? 1 : 0}
+            overflow='hidden'
+            transition='.2s ease-in-out'
+            cursor='pointer'
+            onClick={scrollTop}
+          >
+            <Text
+              fontSize='3xl'
+              fontWeight='bold'
+              background={
+                colorMode === 'dark'
+                  ? 'linear-gradient( 120deg, var(--chakra-colors-teal-500) 30%, var(--chakra-colors-blue-500) 60%)'
+                  : 'linear-gradient( 120deg, var(--chakra-colors-blue-500) 40%, var(--chakra-colors-teal-500) 80%)'
+              }
+              sx={{
+                backgroundClip: 'text',
+                textFillColor: 'transparent',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              N
+            </Text>
+          </Flex>
+          <Flex display={{ md: 'none' }}>
+            <Drawer />
+          </Flex>
+        </Flex>
+        <Flex display={{ base: 'none', md: 'flex' }}>
+          <Menu />
+        </Flex>
       </Flex>
       <Flex align='center' gap={2}>
         <Fade cascade triggerOnce duration={200} delay={1200}>
@@ -102,4 +144,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default observer(Header);

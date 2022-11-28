@@ -6,6 +6,7 @@ import {
   DrawerOverlay,
   Icon,
   IconButton,
+  useColorMode,
   useDisclosure,
 } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';
@@ -13,6 +14,7 @@ import { Menu } from '.';
 
 const Drawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode } = useColorMode();
 
   return (
     <>
@@ -20,6 +22,7 @@ const Drawer = () => {
         variant='ghost'
         size='sm'
         aria-label='Menu'
+        color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
         icon={<Icon as={RiMenuLine} w={4} h={4} />}
         onClick={onOpen}
       />
