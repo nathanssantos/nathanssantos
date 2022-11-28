@@ -1,10 +1,38 @@
 import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
+import { useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { useStore } from 'src/hooks';
 
 const Hero = () => {
   const { t } = useTranslation('hero');
   const { colorMode } = useColorMode();
+  const { uiStore } = useStore();
+  const nameRef = useRef(null);
+
+  const { toggle } = uiStore.logo;
+
+  useEffect(() => {
+    if (!nameRef.current) return;
+
+    const nameElement = nameRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => toggle(entry.isIntersecting));
+      },
+      {
+        root: null,
+        threshold: 0,
+      },
+    );
+
+    observer.observe(nameElement);
+
+    return () => {
+      observer.observe(nameElement);
+    };
+  }, []);
 
   return (
     <Flex height='calc(100vh - 4rem)'>
@@ -30,6 +58,7 @@ const Hero = () => {
           </Text>
           <Flex ml='-0.15rem' mb={2}>
             <Text
+              ref={nameRef}
               fontSize={{ base: '5xl', md: '7xl' }}
               fontWeight='bold'
               lineHeight={1}

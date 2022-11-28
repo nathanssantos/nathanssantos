@@ -18,9 +18,11 @@ const SectionHeader = ({ children }: SectionHeaderProps) => {
       color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
       _after={{
         content: `""`,
-        height: '0.063rem',
+        h: '0.063rem',
         flex: 1,
-        background: 'linear-gradient(to right, transparent, rgb(168, 178, 209))',
+        bg: `linear-gradient(to right, transparent, ${
+          colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'
+        })`,
       }}
     >
       {children}

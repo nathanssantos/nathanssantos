@@ -5,7 +5,19 @@ import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
 import Menu from './Menu';
+import RooStoreProvider from './RootStoreProvider';
 import SectionHeader from './SectionHeader';
 import ThemeProvider from './ThemeProvider';
 
-export { About, Background, Drawer, Footer, Header, Hero, Menu, SectionHeader, ThemeProvider };
+export {
+  About,
+  Background,
+  Drawer,
+  Footer,
+  Header,
+  Hero,
+  Menu,
+  RooStoreProvider,
+  SectionHeader,
+  ThemeProvider,
+};
