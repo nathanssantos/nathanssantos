@@ -101,10 +101,13 @@ const Hero = () => {
           >
             {t('conclusion')}.
           </Text>
-          <Text fontSize={{ base: 'sm', md: 'md' }} maxW={{ base: '25.5rem', md: '29rem' }}>
-            {t('description')}{' '}
+          <Text fontSize={{ base: 'sm', md: 'md' }}>{t('description')}</Text>
+          <Text fontSize={{ base: 'sm', md: 'md' }}>
+            {t('description-2')}{' '}
             <Text
               as='a'
+              href='https://w16.dev/'
+              target='_blank'
               color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               cursor='pointer'
             >
