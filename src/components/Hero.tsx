@@ -119,7 +119,9 @@ const Hero = () => {
                 left: '50%',
                 h: '0.063rem',
                 w: 0,
-                bg: 'linear-gradient(to right, transparent, #64ffda, transparent)',
+                bg: `linear-gradient(to right, transparent, ${
+                  colorMode === 'dark' ? '#64ffda' : '#5374fa'
+                }, transparent)`,
                 transition: 'all 0.2s ease-in-out 0s',
               }}
               sx={{
