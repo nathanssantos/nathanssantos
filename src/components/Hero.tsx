@@ -75,11 +75,11 @@ const Hero = () => {
             <Text
               ref={nameRef}
               fontSize={{ base: '5xl', md: '7xl' }}
-              fontWeight='bold'
+              fontWeight='black'
               lineHeight={1}
               background={
                 colorMode === 'dark'
-                  ? 'linear-gradient( 120deg, var(--chakra-colors-teal-500) 10%, var(--chakra-colors-blue-500) 50%)'
+                  ? 'linear-gradient( 120deg, var(--chakra-colors-teal-500) 20%, var(--chakra-colors-blue-500) 60%)'
                   : 'linear-gradient( 120deg, var(--chakra-colors-blue-500) 50%, var(--chakra-colors-teal-500) 90%)'
               }
               sx={{
@@ -94,7 +94,7 @@ const Hero = () => {
           </Flex>
           <Text
             fontSize={{ base: '2xl', md: '5xl' }}
-            fontWeight='bold'
+            fontWeight='black'
             lineHeight={1}
             mb={{ base: 3, md: 6 }}
             ml='-0.05rem'
@@ -110,6 +110,25 @@ const Hero = () => {
               target='_blank'
               color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               cursor='pointer'
+              position='relative'
+              _after={{
+                content: `""`,
+                position: 'absolute',
+                bottom: '-0.15rem',
+                transform: 'translateX(-50%)',
+                left: '50%',
+                h: '0.063rem',
+                w: 0,
+                bg: 'linear-gradient(to right, transparent, #64ffda, transparent)',
+                transition: 'all 0.2s ease-in-out 0s',
+              }}
+              sx={{
+                '&:hover': {
+                  '&::after': {
+                    width: '100%',
+                  },
+                },
+              }}
             >
               {t('company')}.
             </Text>
@@ -117,7 +136,6 @@ const Hero = () => {
           <Flex
             position='absolute'
             left='50%'
-            transform='translateX(-50%)'
             bottom={8}
             width='1.25rem'
             height='1.875rem'
@@ -125,6 +143,7 @@ const Hero = () => {
             borderRadius='1.563rem'
             transition='0.25s'
             opacity={scrollIcon.isOpen ? 1 : 0}
+            transform={`translateX(-50%) ${scrollIcon.isOpen ? 'scale(1)' : 'scale(0)'}`}
           >
             <ChakraBox
               position='absolute'
@@ -140,8 +159,8 @@ const Hero = () => {
               }}
               // @ts-ignore
               transition={{
-                duration: 1,
-                ease: 'easeInOut',
+                duration: 1.5,
+                ease: 'easeOut',
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
