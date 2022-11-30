@@ -4,7 +4,15 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 
-import { About, Background, Footer, Header, Hero, RooStoreProvider } from '@/components';
+import {
+  About,
+  Background,
+  Contact,
+  Footer,
+  Header,
+  Hero,
+  RooStoreProvider,
+} from '@/components';
 import axios from 'axios';
 import Head from 'next/head';
 import { createContext } from 'react';
@@ -25,6 +33,7 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
       <Background />
       <Hero />
       <About />
+      <Contact />
     </main>
     <Footer />
   </RooStoreProvider>
@@ -36,6 +45,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale
     'header',
     'hero',
     'about',
+    'contact',
     'footer',
   ]);
 

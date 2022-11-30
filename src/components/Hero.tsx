@@ -102,7 +102,14 @@ const Hero = () => {
             {t('conclusion')}.
           </Text>
           <Text fontSize={{ base: 'sm', md: 'md' }} maxW={{ base: '25.5rem', md: '29rem' }}>
-            {t('description')} <Text as='span'>{t('company')}.</Text>
+            {t('description')}{' '}
+            <Text
+              as='a'
+              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+              cursor='pointer'
+            >
+              {t('company')}.
+            </Text>
           </Text>
           <Flex
             position='absolute'
