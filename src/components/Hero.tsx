@@ -16,9 +16,6 @@ import { Fade } from 'react-awesome-reveal';
 import { useStore } from 'src/hooks';
 
 const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
   shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
 });
 
@@ -28,8 +25,7 @@ const Hero = () => {
   const { uiStore } = useStore();
   const nameRef = useRef(null);
 
-  const { toggle } = uiStore.logo;
-  const { isOpen } = uiStore.scrollIcon;
+  const { logo, scrollIcon } = uiStore;
 
   useEffect(() => {
     if (!nameRef.current) return;
@@ -38,7 +34,7 @@ const Hero = () => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => toggle(entry.isIntersecting));
+        entries.forEach((entry) => logo.toggle(entry.isIntersecting));
       },
       {
         root: null,
@@ -118,7 +114,7 @@ const Hero = () => {
             boxShadow={`inset 0 0 0 0.063rem ${colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'}`}
             borderRadius='1.563rem'
             transition='0.25s'
-            opacity={isOpen ? 1 : 0}
+            opacity={scrollIcon.isOpen ? 1 : 0}
           >
             <ChakraBox
               position='absolute'
