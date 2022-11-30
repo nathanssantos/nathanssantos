@@ -1,5 +1,6 @@
 import About from './About';
 import Background from './Background';
+import Contact from './Contact';
 import Drawer from './Drawer';
 import Footer from './Footer';
 import Header from './Header';
@@ -12,6 +13,7 @@ import ThemeProvider from './ThemeProvider';
 export {
   About,
   Background,
+  Contact,
   Drawer,
   Footer,
   Header,

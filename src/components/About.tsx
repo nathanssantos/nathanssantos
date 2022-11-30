@@ -50,7 +50,7 @@ const About = () => {
         fontSize={{ base: 'sm', md: 'md' }}
       >
         <Fade cascade triggerOnce duration={200}>
-          <SectionHeader>About</SectionHeader>
+          <SectionHeader>{t('title')}</SectionHeader>
           <Flex gap={8} direction={{ base: 'column', md: 'row' }}>
             <Avatar
               w='12.5rem'
