@@ -53,7 +53,7 @@ const Header = () => {
       <Flex align='center'>
         <Flex align='center'>
           <Flex
-            maxW={isOpen ? '2.8125rem' : 0}
+            ml={isOpen ? 0 : '-2.625rem'}
             mr={isOpen ? 6 : 0}
             opacity={isOpen ? 1 : 0}
             overflow='hidden'
@@ -62,8 +62,9 @@ const Header = () => {
             onClick={scrollTop}
           >
             <Text
-              fontSize='3xl'
+              fontSize='4xl'
               fontWeight='bold'
+              lineHeight={1}
               background={
                 colorMode === 'dark'
                   ? 'linear-gradient( 120deg, var(--chakra-colors-teal-500) 30%, var(--chakra-colors-blue-500) 60%)'
