@@ -11,6 +11,7 @@ import {
   Footer,
   Header,
   Hero,
+  Jobs,
   RooStoreProvider,
 } from '@/components';
 import axios from 'axios';
@@ -33,6 +34,7 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
       <Background />
       <Hero />
       <About />
+      <Jobs />
       <Contact />
     </main>
     <Footer />
@@ -45,6 +47,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale
     'header',
     'hero',
     'about',
+    'jobs',
     'contact',
     'footer',
   ]);
@@ -55,6 +58,15 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale
         ? 'http://localhost:3000/api/repositories'
         : 'https://nathanssantos.vercel.app/api/repositories',
     );
+
+    if (status !== 200 || !data) {
+      return {
+        props: {
+          ...localeData,
+          repositories: [],
+        },
+      };
+    }
 
     return {
       props: {

@@ -12,3 +12,11 @@ type Repository = {
   homepage?: string;
   html_url: string;
 };
+
+type Job = {
+  key: string;
+  name: string;
+  logo: string;
+  url: string;
+  tags: string[];
+};

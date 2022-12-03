@@ -47,7 +47,7 @@ const About = () => {
         pt={8}
         pb={48}
         gap={8}
-        fontSize={{ base: 'sm', md: 'md' }}
+        fontSize={{ base: 'xs', md: 'sm' }}
       >
         <Fade cascade triggerOnce duration={200}>
           <SectionHeader>{t('title')}</SectionHeader>

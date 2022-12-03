@@ -1,0 +1,33 @@
+{
+  "title": "Some of My Jobs",
+  "list": {
+    "rokkos": {
+      "description-1": "Marketplace for photographers where they show, sell and deliver their photos during the event they're working. The platform also uses facial recognition to help customers find photos in which they are present.",
+      "description-2": "I led the team that created Rokkos from scratch, built the entire front-end, and helped the designers to develop several features to improve usability and user experience."
+    },
+    "tag": {
+      "description-1": "Transportadora Associada de Gás S.A. (TAG) operates in the natural gas transportation segment through gas pipelines. TAG owns and manages a significant portion of Brazil's natural gas transport assets, distributed among the North, Northeast, and Southeast regions.",
+      "description-2": "I developed the front-end of TAG's institutional website taking into account the best SEO practices and following Engie's style guide."
+    },
+    "lets-hike": {
+      "description-1": "Let's Hike is a mobile application that offers lots of information about the natural environment of Florianópolis and the region, guiding users to find support and walk the trails safely.",
+      "description-2": "I participated in the construction of the Let's Hike mobile app and helped the team improve several usability and performance features of the application."
+    },
+    "unne": {
+      "description-1": "Platform used for analysis and management of growth strategies for small and medium businesses.",
+      "description-2": "I developed the front-end of Unne's progressive web app and helped the team identify several improvements that should be applied throughout this process."
+    },
+    "turno-inverso": {
+      "description-1": "Turno Inverso is an after-school activities platform for parents and guardians who want to explore their children's interests.",
+      "description-2": "I led the team that built the Turno Inverso mobile app and developed much of the front-end."
+    },
+    "we-play": {
+      "description-1": "A platform that allows teachers and arenas to manage classes and students in real-time, making life easier for those who practice sports.",
+      "description-2": "I was part of the team that created and developed We Play."
+    },
+    "plastubos": {
+      "description-1": "A manufacturer of pipes and hydraulic connections present in the Brazilian market for over 20 years.",
+      "description-2": "I was part of the team that built the company institutional website and built much of the front-end."
+    }
+  }
+}
