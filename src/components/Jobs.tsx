@@ -33,9 +33,9 @@ const Jobs = () => {
           <Fade cascade triggerOnce duration={200}>
             {jobs.map((item) => (
               <Flex
+                key={item.key}
                 shadow='xl'
                 direction={{ base: 'column', md: 'row' }}
-                key={item.key}
                 py={{ base: 12, md: 8 }}
                 px={{ base: 8, md: 16 }}
                 gap={16}

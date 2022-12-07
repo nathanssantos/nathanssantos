@@ -7,6 +7,7 @@ import Header from './Header';
 import Hero from './Hero';
 import Jobs from './Jobs';
 import Menu from './Menu';
+import Projects from './Projects';
 import RooStoreProvider from './RootStoreProvider';
 import SectionHeader from './SectionHeader';
 import ThemeProvider from './ThemeProvider';
@@ -21,6 +22,7 @@ export {
   Hero,
   Jobs,
   Menu,
+  Projects,
   RooStoreProvider,
   SectionHeader,
   ThemeProvider,
