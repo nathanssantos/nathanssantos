@@ -17,6 +17,7 @@ import {
 import axios from 'axios';
 import Head from 'next/head';
 import { createContext } from 'react';
+import Projects from 'src/components/Projects';
 
 type HomeProps = {
   repositories: Repository[];
@@ -35,6 +36,7 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
       <Hero />
       <About />
       <Jobs />
+      <Projects projects={repositories} />
       <Contact />
     </main>
     <Footer />
@@ -48,6 +50,7 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale
     'hero',
     'about',
     'jobs',
+    'projects',
     'contact',
     'footer',
   ]);
