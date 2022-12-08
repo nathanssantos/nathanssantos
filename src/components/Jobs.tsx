@@ -15,7 +15,7 @@ const Jobs = () => {
   const { toggle } = uiStore.scrollIcon;
 
   return (
-    <Flex fontFamily='Roboto Mono'>
+    <Flex id='jobs' fontFamily='Roboto Mono'>
       <Container
         w='full'
         maxW='container.xl'
@@ -23,7 +23,7 @@ const Jobs = () => {
         flexDirection='column'
         justifyContent='center'
         px={{ base: 6, md: 24 }}
-        pt={8}
+        pt={24}
         pb={48}
         gap={8}
         fontSize='xs'

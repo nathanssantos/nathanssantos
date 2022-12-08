@@ -36,7 +36,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <Flex>
+    <Flex id='contact'>
       <Container
         w='full'
         maxW='container.xl'
@@ -44,7 +44,7 @@ const Contact = () => {
         flexDirection='column'
         justifyContent='center'
         px={{ base: 6, md: 24 }}
-        pt={8}
+        pt={24}
         pb={24}
         gap={8}
       >

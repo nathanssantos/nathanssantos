@@ -1,4 +1,5 @@
 import axios from 'axios';
+import _ from 'lodash.mergewith';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Message = { message: String };
@@ -7,7 +8,9 @@ type Data = Repository[] | Message;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   try {
-    const response = await axios.get(`https://api.github.com/users/nathanssantos/repos`);
+    const response = await axios.get<Repository[]>(
+      `https://api.github.com/users/nathanssantos/repos`,
+    );
 
     const { status, data } = response;
 
@@ -21,18 +24,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     const favoriteRepositories = [
       'evolution-graph',
-      'clockify-teams',
-      'portfolio',
-      'react-vite-boilerplate',
-      'react-native-boilerplate',
+      'react-ts-boilerplate',
       'podjs',
+      'clockify-teams',
+      'react-native-ts-boilerplate',
+      'portfolio',
     ];
 
     const filteredRepositories = data.filter(({ name }: Repository) =>
       favoriteRepositories?.includes(name),
     );
 
-    res.status(200).json(filteredRepositories);
+    const sortedRepositories = filteredRepositories.sort(
+      (a, b) => b.stargazers_count - a.stargazers_count,
+    );
+
+    res.status(200).json(sortedRepositories);
   } catch (error) {
     res.status(500).json({ message: 'Server ERROR' });
   }
