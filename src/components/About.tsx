@@ -36,7 +36,7 @@ const About = () => {
   }, []);
 
   return (
-    <Flex>
+    <Flex id='about'>
       <Container
         w='full'
         maxW='container.xl'
@@ -44,7 +44,7 @@ const About = () => {
         flexDirection='column'
         justifyContent='center'
         px={{ base: 6, md: 24 }}
-        pt={8}
+        pt={24}
         pb={48}
         gap={8}
         fontSize={{ base: 'xs', md: 'sm' }}

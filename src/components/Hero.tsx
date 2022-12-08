@@ -136,6 +136,8 @@ const Hero = () => {
             </Text>
           </Text>
           <Flex
+            as='a'
+            href='#about'
             position='absolute'
             left='50%'
             bottom={8}

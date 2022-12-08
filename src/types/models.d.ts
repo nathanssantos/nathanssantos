@@ -2,7 +2,7 @@ type Repository = {
   id: number;
   name: string;
   description?: string;
-  stargazers_count?: number;
+  stargazers_count: number;
   language: string;
   license?: {
     key: string;

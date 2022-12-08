@@ -31,7 +31,7 @@ const Projects = ({ projects }: ProjectsProps) => {
   const { toggle } = uiStore.scrollIcon;
 
   return (
-    <Flex fontFamily='Roboto Mono'>
+    <Flex id='projects' fontFamily='Roboto Mono'>
       <Container
         w='full'
         maxW='container.xl'
@@ -39,7 +39,7 @@ const Projects = ({ projects }: ProjectsProps) => {
         flexDirection='column'
         justifyContent='center'
         px={{ base: 6, md: 24 }}
-        pt={8}
+        pt={24}
         pb={48}
         gap={8}
         fontSize='xs'
@@ -79,14 +79,16 @@ const Projects = ({ projects }: ProjectsProps) => {
                     {item.language}
                   </Text>
                   <Flex gap={2}>
-                    <IconButton
-                      as='a'
-                      href={item.homepage}
-                      target='_blank'
-                      aria-label='Homepage Link'
-                      variant='ghost'
-                      icon={<Icon as={RiExternalLinkLine} fontSize='xl' />}
-                    />
+                    {!!item.homepage?.length && (
+                      <IconButton
+                        as='a'
+                        href={item.homepage}
+                        target='_blank'
+                        aria-label='Homepage Link'
+                        variant='ghost'
+                        icon={<Icon as={RiExternalLinkLine} fontSize='xl' />}
+                      />
+                    )}
                     <IconButton
                       as='a'
                       href={`https://github.com/nathanssantos/${item.name}`}

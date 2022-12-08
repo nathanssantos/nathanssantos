@@ -4,11 +4,17 @@
     "evolution-graph": {
       "description": "Highly customizable, animated and responsive evolution graph implementation. The package is used to create flexible data visualizations and present evolution relationships between entities."
     },
-    "clockify-teams": {
-      "description": "Team management app used to generate warnings and send email reports about collaborator's performance."
+    "react-ts-boilerplate": {
+      "description": "WIP - Boilerplate for React.js applications, built with Mobx as a state manager, Chakra UI as a component library, and Vite as a build tool."
     },
     "podjs": {
       "description": "PodJS is an open source podcast app built with Next.js, MobX and Chakra UI. https://podjs.vercel.app"
+    },
+    "clockify-teams": {
+      "description": "Team management app used to generate warnings and send email reports about collaborator's performance."
+    },
+    "react-native-ts-boilerplate": {
+      "description": "WIP - Boilerplate for React Native applications, built with Native Base as a component library and MobX as a state manager."
     },
     "portfolio": {
       "description": "My portfolio built with Next.js."

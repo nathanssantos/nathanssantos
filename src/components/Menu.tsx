@@ -10,51 +10,44 @@ const Menu = ({ vertical = false }: MenuProps) => {
   const { t } = useTranslation('header');
   const { colorMode } = useColorMode();
 
+  const menu = [
+    {
+      id: 'about',
+      label: t('about'),
+    },
+    {
+      id: 'jobs',
+      label: t('experience'),
+    },
+    {
+      id: 'projects',
+      label: t('projects'),
+    },
+    {
+      id: 'contact',
+      label: t('contact'),
+    },
+  ];
+
   return (
     <Box as='nav' fontFamily='Roboto Mono'>
       <Flex as='ul' direction={vertical ? 'column' : 'row'} listStyleType='none' gap={2}>
         <Fade cascade triggerOnce duration={200} delay={500}>
-          <li>
-            <Button
-              size='sm'
-              variant='ghost'
-              fontWeight={500}
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-            >
-              {t('about')}
-            </Button>
-          </li>
-          <li>
-            <Button
-              size='sm'
-              variant='ghost'
-              fontWeight={500}
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-            >
-              {t('experience')}
-            </Button>
-          </li>
-          <li>
-            <Button
-              size='sm'
-              variant='ghost'
-              fontWeight={500}
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-            >
-              {t('projects')}
-            </Button>
-          </li>
-          <li>
-            <Button
-              size='sm'
-              variant='ghost'
-              fontWeight={500}
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-            >
-              {t('contact')}
-            </Button>
-          </li>
-          <li>
+          {menu.map(({ id, label }) => (
+            <li key={id}>
+              <Button
+                as='a'
+                href={`#${id}`}
+                size='sm'
+                variant='ghost'
+                fontWeight={500}
+                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+              >
+                {label}
+              </Button>
+            </li>
+          ))}
+          {/* <li>
             <Button
               size='sm'
               variant='ghost'
@@ -63,7 +56,7 @@ const Menu = ({ vertical = false }: MenuProps) => {
             >
               {t('resume')}
             </Button>
-          </li>
+          </li> */}
         </Fade>
       </Flex>
     </Box>
