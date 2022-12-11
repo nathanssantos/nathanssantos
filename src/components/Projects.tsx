@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Button,
   Container,
   Flex,
   Grid,
@@ -23,7 +24,7 @@ type ProjectsProps = {
 };
 
 const Projects = ({ projects }: ProjectsProps) => {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation(['projects', 'common']);
   const { colorMode } = useColorMode();
   const avatarRef = useRef(null);
   const { uiStore } = useStore();
@@ -44,7 +45,9 @@ const Projects = ({ projects }: ProjectsProps) => {
         gap={8}
         fontSize='xs'
       >
-        <SectionHeader>{t('title')}</SectionHeader>
+        <Fade cascade triggerOnce duration={200}>
+          <SectionHeader>{t('title')}</SectionHeader>
+        </Fade>
         <Grid gap={8} gridTemplateColumns={{ lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}>
           <Fade cascade triggerOnce duration={200}>
             {projects.map((item) => (
@@ -103,6 +106,21 @@ const Projects = ({ projects }: ProjectsProps) => {
             ))}
           </Fade>
         </Grid>
+        <Flex alignSelf='center' mt={8}>
+          <Fade cascade triggerOnce duration={200}>
+            <Button
+              as='a'
+              target='_blank'
+              href='https://github.com/nathanssantos?tab=repositories'
+              variant='outline'
+              size='lg'
+              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+              borderColor={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+            >
+              {t('see-more', { ns: 'common' })}
+            </Button>
+          </Fade>
+        </Flex>
       </Container>
     </Flex>
   );

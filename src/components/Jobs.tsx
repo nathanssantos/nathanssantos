@@ -28,7 +28,9 @@ const Jobs = () => {
         gap={8}
         fontSize='xs'
       >
-        <SectionHeader>{t('title')}</SectionHeader>
+        <Fade cascade triggerOnce duration={200}>
+          <SectionHeader>{t('title')}</SectionHeader>
+        </Fade>
         <Flex gap={8} direction='column'>
           <Fade cascade triggerOnce duration={200}>
             {jobs.map((item) => (

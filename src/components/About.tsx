@@ -16,7 +16,7 @@ const About = () => {
   useEffect(() => {
     if (!avatarRef.current) return;
 
-    const nameElement = avatarRef.current;
+    const avatarElement = avatarRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,10 +28,10 @@ const About = () => {
       },
     );
 
-    observer.observe(nameElement);
+    observer.observe(avatarElement);
 
     return () => {
-      observer.observe(nameElement);
+      observer.observe(avatarElement);
     };
   }, []);
 
