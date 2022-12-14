@@ -1,22 +1,16 @@
 import {
-  Avatar,
   Button,
   Container,
   Flex,
   Grid,
   Icon,
   IconButton,
-  Image,
-  Tag,
   Text,
   useColorMode,
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import React, { useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { RiStarLine, RiExternalLinkLine, RiGithubLine } from 'react-icons/ri';
-import { jobs } from 'src/constants';
-import { useStore } from 'src/hooks';
+import { RiExternalLinkLine, RiGithubLine, RiStarLine } from 'react-icons/ri';
 import SectionHeader from './SectionHeader';
 
 type ProjectsProps = {
@@ -26,10 +20,6 @@ type ProjectsProps = {
 const Projects = ({ projects }: ProjectsProps) => {
   const { t } = useTranslation(['projects', 'common']);
   const { colorMode } = useColorMode();
-  const avatarRef = useRef(null);
-  const { uiStore } = useStore();
-
-  const { toggle } = uiStore.scrollIcon;
 
   return (
     <Flex id='projects' fontFamily='Roboto Mono'>
@@ -53,21 +43,31 @@ const Projects = ({ projects }: ProjectsProps) => {
             {projects.map((item) => (
               <Flex
                 key={item.id}
-                shadow='xl'
                 direction='column'
                 p={8}
                 bg={
-                  colorMode === 'dark' ? 'rgba(42, 42, 42, 0.75)' : 'rgba(240, 240, 240, 0.75)'
+                  colorMode === 'dark' ? 'rgba(42, 42, 42, 0.75)' : 'rgba(230, 230, 230, 0.75)'
                 }
                 backdropFilter='blur(0.313rem)'
                 borderRadius='md'
                 h='full'
+                role='group'
+                transition='0.2s'
+                _hover={{
+                  shadow: 'xl',
+                  transform: 'translateY(-0.25rem)',
+                }}
               >
-                <Flex align='center' justify='space-between' mb={6}>
-                  <Text fontSize='xl' fontWeight='bold'>
+                <Flex
+                  align='center'
+                  justify='space-between'
+                  mb={6}
+                  _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
+                >
+                  <Text fontSize='xl' fontWeight='bold' transition='0.2s'>
                     {item.name}
                   </Text>
-                  <Flex align='center' gap={2} fontSize='md'>
+                  <Flex align='center' gap={2} fontSize='md' transition='0.2s'>
                     <Icon as={RiStarLine} fontSize='xl' />
                     {item.stargazers_count}
                   </Flex>
@@ -77,8 +77,12 @@ const Projects = ({ projects }: ProjectsProps) => {
                     {t(`list.${item.name}.description`)}
                   </Text>
                 </Flex>
-                <Flex align='center' justify='space-between'>
-                  <Text fontSize='sm' fontWeight='bold'>
+                <Flex
+                  align='center'
+                  justify='space-between'
+                  _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
+                >
+                  <Text fontSize='sm' fontWeight='bold' transition='0.2s'>
                     {item.language}
                   </Text>
                   <Flex gap={2}>
