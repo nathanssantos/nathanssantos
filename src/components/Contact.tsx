@@ -63,7 +63,6 @@ const Contact = () => {
               as='a'
               href='mailto:nathansilvasantos@gmail.com'
               variant='outline'
-              size='lg'
               color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               borderColor={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
             >
