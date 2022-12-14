@@ -67,10 +67,12 @@ const Projects = ({ projects }: ProjectsProps) => {
                   <Text fontSize='xl' fontWeight='bold' transition='0.2s'>
                     {item.name}
                   </Text>
-                  <Flex align='center' gap={2} fontSize='md' transition='0.2s'>
-                    <Icon as={RiStarLine} fontSize='xl' />
-                    {item.stargazers_count}
-                  </Flex>
+                  {!!item.stargazers_count && (
+                    <Flex align='center' gap={2} fontSize='md' transition='0.2s'>
+                      <Icon as={RiStarLine} fontSize='xl' />
+                      {item.stargazers_count}
+                    </Flex>
+                  )}
                 </Flex>
                 <Flex flex={1}>
                   <Text fontSize='sm' mb={8}>
