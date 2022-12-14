@@ -13,16 +13,11 @@ const Hero = () => {
     await loadFull(engine);
   }, []);
 
-  // const particlesLoaded = useCallback(async (container: ParticlesContainer | undefined) => {
-  //   await console.log(container);
-  // }, []);
-
   return (
     <Flex position='absolute' left={0} right={0} top={0} bottom={0}>
       <Particles
         id='tsparticles'
         init={particlesInit}
-        // loaded={particlesLoaded}
         options={{
           fpsLimit: 120,
           interactivity: {

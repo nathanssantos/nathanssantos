@@ -159,12 +159,11 @@ const Hero = () => {
               bg={colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'}
               borderRadius='1.563rem'
               animate={{
-                top: ['0.35rem', '0.55rem', '0.35rem'],
+                top: ['0.3rem', '0.5rem', '0.3rem'],
               }}
               // @ts-ignore
               transition={{
-                duration: 1.5,
-                ease: 'easeOut',
+                duration: 1,
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
