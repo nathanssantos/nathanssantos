@@ -113,7 +113,6 @@ const Projects = ({ projects }: ProjectsProps) => {
               target='_blank'
               href='https://github.com/nathanssantos?tab=repositories'
               variant='outline'
-              size='lg'
               color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               borderColor={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
             >
