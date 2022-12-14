@@ -1,5 +1,4 @@
 import axios from 'axios';
-import _ from 'lodash.mergewith';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Message = { message: String };
@@ -28,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       'podjs',
       'clockify-teams',
       'react-native-ts-boilerplate',
-      'portfolio',
+      'svelte-ts-boilerplate',
     ];
 
     const filteredRepositories = data.filter(({ name }: Repository) =>

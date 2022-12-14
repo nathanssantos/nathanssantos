@@ -16,8 +16,8 @@
     "react-native-ts-boilerplate": {
       "description": "WIP - Boilerplate for React Native applications, built with Native Base as a component library and MobX as a state manager."
     },
-    "portfolio": {
-      "description": "My portfolio built with Next.js."
+    "svelte-ts-boilerplate": {
+      "description": "WIP - Boilerplate for Svelte.js applications, built with Svelte Material UI as a component library and Vite as a build tool."
     }
   }
 }
