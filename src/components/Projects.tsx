@@ -122,7 +122,7 @@ const Projects = ({ projects }: ProjectsProps) => {
               color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               borderColor={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
             >
-              {t('see-more', { ns: 'common' })}
+              {t('view-more', { ns: 'common' })}
             </Button>
           </Fade>
         </Flex>
