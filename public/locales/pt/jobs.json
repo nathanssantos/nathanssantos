@@ -2,32 +2,32 @@
   "title": "Alguns dos Meus Trabalhos",
   "list": {
     "rokkos": {
-      "description-1": "Marketplace for photographers where they show, sell and deliver their photos during the event they're working. The platform also uses facial recognition to help customers find photos in which they are present.",
-      "description-2": "I led the team that created Rokkos from scratch, built the entire front-end, and helped the designers to develop several features to improve usability and user experience."
+      "description-1": "Marketplace para fotógrafos onde eles exibem, vendem e entregam suas fotos durantes eventos. A plataforma também utiliza reconhecimento facial para ajudar clientes a encontrar fotos nas quais estão presentes.",
+      "description-2": "Liderei o time que criou a Rokkos do zero, construi todo o front-end auxilei os designers a desenvolver diversas funcionalidades com o intuito de melhorar a expereiência do usuário."
     },
     "tag": {
-      "description-1": "Transportadora Associada de Gás S.A. (TAG) operates in the natural gas transportation segment through gas pipelines. TAG owns and manages a significant portion of Brazil's natural gas transport assets, distributed among the North, Northeast, and Southeast regions.",
-      "description-2": "I developed the front-end of TAG's institutional website taking into account the best SEO practices and following Engie's style guide."
-    },
-    "lets-hike": {
-      "description-1": "Let's Hike is a mobile application that offers lots of information about the natural environment of Florianópolis and the region, guiding users to find support and walk the trails safely.",
-      "description-2": "I participated in the construction of the Let's Hike mobile app and helped the team improve several usability and performance features of the application."
-    },
-    "unne": {
-      "description-1": "Platform used for analysis and management of growth strategies for small and medium businesses.",
-      "description-2": "I developed the front-end of Unne's progressive web app and helped the team identify several improvements that should be applied throughout this process."
+      "description-1": "A Transportadora Associada de Gás S.A. (TAG) atua no segmento de transporte de gás natural por meio de gasodutos. A TAG é proprietária e gestora de importante parcela dos ativos de transporte de gás natural do país, distribuídos entre as regiões Norte, Nordeste e Sudeste,",
+      "description-2": "Desenvolvi o front-end do site institucional da TAG levando em conta as melhores prática de SEO e seguindo o style guide da Engie."
     },
     "turno-inverso": {
-      "description-1": "Turno Inverso is an after-school activities platform for parents and guardians who want to explore their children's interests.",
-      "description-2": "I led the team that built the Turno Inverso mobile app and developed much of the front-end."
+      "description-1": "Turno Inverso é um app que conecta alunos com professores de esporte, cultura e idiomas em um ambiente seguro e descomplicado.",
+      "description-2": "Liderei o time que criou a aplicação e construi boa parte do front-end."
+    },
+    "lets-hike": {
+      "description-1": "Let's Hike é um aplicativo mobile que oferece informações sobre o ambiente natural de Florianópolis e região, ajudando os usuários a encontrar suporte e a percorrer as trilhas de maneira segura.",
+      "description-2": "Eu fiz parte do time que construiu o aplicativo Let's Hike e auxiliei em melhorias na usabilidade."
+    },
+    "unne": {
+      "description-1": "Plataforma utilizada para análise e gerenciamento de estratégias para crescimento de pequenos e médios negócios.",
+      "description-2": "Desenvolvi o front-end da aplicação e ajudei na criação de diversas funcionalidades durante este processo."
     },
     "we-play": {
-      "description-1": "A platform that allows teachers and arenas to manage classes and students in real-time, making life easier for those who practice sports.",
-      "description-2": "I was part of the team that created and developed We Play."
+      "description-1": "Plataforma que permite que professores e arenas de esportes gerenciem aulas em tempo real.",
+      "description-2": "Fiz parte do time que criou e desenvolveu o We Play."
     },
     "plastubos": {
-      "description-1": "A manufacturer of pipes and hydraulic connections present in the Brazilian market for over 20 years.",
-      "description-2": "I was part of the team that built the company institutional website and built much of the front-end."
+      "description-1": "Fabricante de tubos e conexões hidráulicas presente no mercado brasileiro há mais de 20 anos.",
+      "description-2": "Fiz parte do time que desenvolveu o site institucional da Plastubos e construi grande parte do front-end."
     }
   }
 }

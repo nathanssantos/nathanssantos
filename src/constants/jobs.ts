@@ -1,5 +1,12 @@
 const jobs: Job[] = [
   {
+    key: 'rokkos',
+    name: 'Rokkos',
+    logo: '/images/jobs/rokkos.png',
+    url: 'https://web.rokkos.app',
+    tags: ['React.js', 'MobX', 'Material UI', 'Sass'],
+  },
+  {
     key: 'tag',
     name: 'Engie TAG',
     logo: '/images/jobs/tag.png',
@@ -7,11 +14,11 @@ const jobs: Job[] = [
     tags: ['WordPress', 'Sass'],
   },
   {
-    key: 'rokkos',
-    name: 'Rokkos',
-    logo: '/images/jobs/rokkos.png',
-    url: 'https://web.rokkos.app',
-    tags: ['React.js', 'MobX', 'Material UI', 'Sass'],
+    key: 'turno-inverso',
+    name: 'Turno Inverso',
+    logo: '/images/jobs/turno-inverso.png',
+    url: 'https://play.google.com/store/apps/details?id=br.com.turnoinverso.aluno',
+    tags: ['React Native', 'MobX', 'Native Base'],
   },
   {
     key: 'lets-hike',
@@ -26,13 +33,6 @@ const jobs: Job[] = [
     logo: '/images/jobs/unne.png',
     url: 'https://app.unnegestao.com.br',
     tags: ['Vue.js', 'Quasar Framework', 'Sass'],
-  },
-  {
-    key: 'turno-inverso',
-    name: 'Turno Inverso',
-    logo: '/images/jobs/turno-inverso.png',
-    url: 'https://play.google.com/store/apps/details?id=br.com.turnoinverso.aluno',
-    tags: ['React Native', 'MobX', 'Native Base'],
   },
   {
     key: 'we-play',
