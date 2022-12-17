@@ -3,7 +3,7 @@
   "list": {
     "rokkos": {
       "description-1": "Marketplace para fotógrafos onde eles exibem, vendem e entregam suas fotos durantes eventos. A plataforma também utiliza reconhecimento facial para ajudar clientes a encontrar fotos nas quais estão presentes.",
-      "description-2": "Liderei o time que criou a Rokkos do zero, construi todo o front-end auxilei os designers a desenvolverem diversas funcionalidades com o intuito de melhorar a expereiência do usuário."
+      "description-2": "Liderei o time que criou a Rokkos do zero, construí todo o front-end auxilei os designers a desenvolverem diversas funcionalidades com o intuito de melhorar a expereiência do usuário."
     },
     "tag": {
       "description-1": "A Transportadora Associada de Gás S.A. (TAG) atua no segmento de transporte de gás natural por meio de gasodutos. A TAG é proprietária e gestora de importante parcela dos ativos de transporte de gás natural do país, distribuídos entre as regiões Norte, Nordeste e Sudeste,",
@@ -11,7 +11,7 @@
     },
     "turno-inverso": {
       "description-1": "Turno Inverso é um app que conecta alunos com professores de esporte, cultura e idiomas em um ambiente seguro e descomplicado.",
-      "description-2": "Liderei o time que criou a aplicação e construi boa parte do front-end."
+      "description-2": "Liderei o time que criou a aplicação e construí boa parte do front-end."
     },
     "lets-hike": {
       "description-1": "Let's Hike é um aplicativo mobile que oferece informações sobre o ambiente natural de Florianópolis e região, ajudando os usuários a encontrar suporte e a percorrer as trilhas de maneira segura.",
@@ -27,7 +27,7 @@
     },
     "plastubos": {
       "description-1": "Fabricante de tubos e conexões hidráulicas presente no mercado brasileiro há mais de 20 anos.",
-      "description-2": "Fiz parte do time que desenvolveu o site institucional da Plastubos e construi grande parte do front-end."
+      "description-2": "Fiz parte do time que desenvolveu o site institucional da Plastubos e construí grande parte do front-end."
     }
   }
 }
