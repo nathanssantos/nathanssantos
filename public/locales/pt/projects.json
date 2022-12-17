@@ -2,22 +2,22 @@
   "title": "Meus projetos de código aberto",
   "list": {
     "evolution-graph": {
-      "description": "Highly customizable, animated and responsive evolution graph implementation. The package is used to create flexible data visualizations and present evolution relationships between entities."
+      "description": "Implementação de gráfico de evolução altamente customizável, animada e responsiva. Este pacote é utilizado para visualizar dados de maneira flexível e apresentar relações de evolução entre entidades."
     },
     "react-ts-boilerplate": {
-      "description": "WIP - Boilerplate for React.js applications, built with Mobx as a state manager, Chakra UI as a component library, and Vite as a build tool."
+      "description": "WIP - Boilerplate para aplicações React.js construído com MobX e Chakra UI."
     },
     "podjs": {
-      "description": "PodJS is an open source podcast app built with Next.js, MobX and Chakra UI."
+      "description": "PodJS é um agregador de podcasts construído com Next.js, MobX e Chakra UI."
     },
     "clockify-teams": {
-      "description": "Team management app used to generate warnings and send email reports about collaborator's performance."
+      "description": "Aplicação de gerenciamento de times integrada ao Clockify e construída com React.js, MobX e Material UI. Usada para gerar notificações e enviar emails de relatório sobre as entradas de tempo de colaboradores."
     },
     "react-native-ts-boilerplate": {
-      "description": "WIP - Boilerplate for React Native applications, built with Native Base as a component library and MobX as a state manager."
+      "description": "WIP - Boilerplate para aplicações React Native construído com MobX e Native Base."
     },
     "svelte-ts-boilerplate": {
-      "description": "WIP - Boilerplate for Svelte.js applications, built with Svelte Material UI as a component library and Vite as a build tool."
+      "description": "WIP - Boilerplate para aplicações Svelte.js construído com Svelte Material UI."
     }
   }
 }
