@@ -38,7 +38,7 @@ const Projects = ({ projects }: ProjectsProps) => {
         <Fade cascade triggerOnce duration={200}>
           <SectionHeader>{t('title')}</SectionHeader>
         </Fade>
-        <Grid gap={8} gridTemplateColumns={{ lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}>
+        <Grid gap={6} gridTemplateColumns={{ lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}>
           <Fade cascade triggerOnce duration={200}>
             {projects.map((item) => (
               <Flex
@@ -59,12 +59,13 @@ const Projects = ({ projects }: ProjectsProps) => {
                 }}
               >
                 <Flex
-                  align='center'
+                  align='flex-start'
                   justify='space-between'
                   mb={6}
+                  gap={2}
                   _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
                 >
-                  <Text fontSize='xl' fontWeight='bold' transition='0.2s'>
+                  <Text fontSize='lg' fontWeight='bold' transition='0.2s'>
                     {item.name}
                   </Text>
                   {!!item.stargazers_count && (
@@ -75,11 +76,9 @@ const Projects = ({ projects }: ProjectsProps) => {
                   )}
                 </Flex>
                 <Flex flex={1}>
-                  <Text fontSize='sm' mb={8}>
-                    {t(`list.${item.name}.description`)}
-                  </Text>
+                  <Text mb={8}>{t(`list.${item.name}.description`)}</Text>
                 </Flex>
-                <Flex align='center' justify='space-between'>
+                <Flex align='center' justify='space-between' gap={2}>
                   <Text
                     fontSize='sm'
                     fontWeight='bold'

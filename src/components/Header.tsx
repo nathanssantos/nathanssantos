@@ -28,9 +28,9 @@ const Header = () => {
 
   const { isOpen } = uiStore.logo;
 
-  const handleChangeLanguage = (locale: 'en' | 'pt') => {
+  const handleToggleLanguage = () => {
     const { pathname, asPath, query } = router;
-    router.push({ pathname, query }, asPath, { locale });
+    router.push({ pathname, query }, asPath, { locale: router.locale === 'pt' ? 'en' : 'pt' });
   };
 
   const scrollTop = () => {
@@ -90,33 +90,35 @@ const Header = () => {
       </Flex>
       <Flex align='center' gap={2}>
         <Fade cascade triggerOnce duration={200} delay={1200}>
-          <ChakraMenu>
-            <Tooltip hasArrow label={t('select-language')} offset={[0, 16]}>
-              <MenuButton
-                as={Button}
-                variant='ghost'
-                leftIcon={<Icon as={RiTranslate} w={4} h={4} />}
-                size='sm'
-                fontWeight={400}
-                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-              >
-                {router.locale?.toUpperCase()}
-              </MenuButton>
-            </Tooltip>
-            <MenuList
-              py={2}
-              borderWidth={0}
-              minW={0}
-              boxShadow='0px 8px 20px -2px rgba(0, 0, 0, 0.08)'
+          <Tooltip hasArrow label={t('change-language')} offset={[0, 16]}>
+            <Button
+              variant='ghost'
+              leftIcon={<Icon as={RiTranslate} w={4} h={4} />}
+              size='sm'
+              fontWeight={400}
+              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+              overflow='hidden'
+              alignItems='flex-start'
+              role='group'
+              onClick={handleToggleLanguage}
             >
-              <MenuItem px={4} fontSize='.75rem' onClick={() => handleChangeLanguage('en')}>
-                English
-              </MenuItem>
-              <MenuItem px={4} fontSize='.75rem' onClick={() => handleChangeLanguage('pt')}>
-                Português
-              </MenuItem>
-            </MenuList>
-          </ChakraMenu>
+              <Flex
+                direction='column'
+                transform={`translateY(${router?.locale === 'pt' ? '-50%' : '0'})`}
+                transition='0.2s ease'
+                _groupHover={{
+                  transform: `translateY(${router?.locale === 'en' ? '-50%' : '0'})`,
+                }}
+              >
+                <Flex h={8} align='center'>
+                  EN
+                </Flex>
+                <Flex h={8} align='center'>
+                  PT
+                </Flex>
+              </Flex>
+            </Button>
+          </Tooltip>
           <Tooltip
             hasArrow
             label={colorMode === 'light' ? t('turn-off-the-light') : t('turn-on-the-light')}

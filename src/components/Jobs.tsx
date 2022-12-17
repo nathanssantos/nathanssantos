@@ -35,10 +35,13 @@ const Jobs = () => {
         <Fade cascade triggerOnce duration={200}>
           <SectionHeader>{t('title')}</SectionHeader>
         </Fade>
-        <Flex gap={8} direction='column'>
+        <Flex gap={6} direction='column'>
           <Fade cascade triggerOnce duration={200}>
             {jobs.map((item) => (
               <Flex
+                as='a'
+                href={item.url}
+                target='_blank'
                 key={item.key}
                 direction={{ base: 'column', md: 'row' }}
                 py={{ base: 12, md: 8 }}
@@ -89,29 +92,17 @@ const Jobs = () => {
                   >
                     {t(`list.${item.key}.description-2`)}
                   </Text>
-                  <Flex align='center' justify='space-between' w='full'>
-                    <Flex gap={2}>
-                      {item.tags.map((tag) => (
-                        <Tag
-                          key={tag}
-                          bg={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-                          color={colorMode === 'dark' ? '#222' : '#fff'}
-                          size='sm'
-                        >
-                          {tag}
-                        </Tag>
-                      ))}
-                    </Flex>
-                    <IconButton
-                      as='a'
-                      href={item.url}
-                      target='_blank'
-                      aria-label='Homepage Link'
-                      variant='ghost'
-                      size='sm'
-                      icon={<Icon as={RiExternalLinkLine} fontSize='xl' />}
-                      _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
-                    />
+                  <Flex gap={2} wrap='wrap'>
+                    {item.tags.map((tag) => (
+                      <Tag
+                        key={tag}
+                        bg={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+                        color={colorMode === 'dark' ? '#222' : '#fff'}
+                        size='sm'
+                      >
+                        {tag}
+                      </Tag>
+                    ))}
                   </Flex>
                 </Flex>
               </Flex>
