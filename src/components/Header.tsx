@@ -44,7 +44,8 @@ const Header = () => {
       top={0}
       align='center'
       justify='space-between'
-      p={4}
+      py={4}
+      px={4}
       gap={2}
       bg={colorMode === 'dark' ? 'rgba(34, 34, 34, 0.75)' : 'rgba(240, 240, 240, 0.75)'}
       backdropFilter='blur(0.313rem)'
@@ -53,7 +54,7 @@ const Header = () => {
       <Flex align='center'>
         <Flex align='center'>
           <Flex
-            ml={isOpen ? 0 : '-2.625rem'}
+            ml={{ base: isOpen ? 0 : '-1.625rem', md: isOpen ? 0 : '-2.625rem' }}
             mr={isOpen ? 6 : 0}
             opacity={isOpen ? 1 : 0}
             overflow='hidden'

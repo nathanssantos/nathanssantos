@@ -43,7 +43,7 @@ const Contact = () => {
         display='flex'
         flexDirection='column'
         justifyContent='center'
-        px={{ base: 6, md: 24 }}
+        px={{ base: 4, md: 24 }}
         pt={24}
         pb={24}
         gap={8}
