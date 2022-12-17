@@ -57,7 +57,7 @@ const Hero = () => {
         display='flex'
         flexDirection='column'
         justifyContent='center'
-        px={{ base: 6, md: 24 }}
+        px={{ base: 4, md: 24 }}
         pt={8}
         pb={48}
       >
