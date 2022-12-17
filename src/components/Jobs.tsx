@@ -42,7 +42,8 @@ const Jobs = () => {
                 key={item.key}
                 direction={{ base: 'column', md: 'row' }}
                 py={{ base: 12, md: 8 }}
-                px={{ base: 8, md: 16 }}
+                pl={{ base: 8, md: 16 }}
+                pr={8}
                 gap={16}
                 align='flex-start'
                 bg={
@@ -70,7 +71,7 @@ const Jobs = () => {
                     objectFit='contain'
                   />
                 </Flex>
-                <Flex direction='column'>
+                <Flex direction='column' w='full'>
                   <Text
                     mb={6}
                     fontSize='xl'
@@ -107,6 +108,7 @@ const Jobs = () => {
                       target='_blank'
                       aria-label='Homepage Link'
                       variant='ghost'
+                      size='sm'
                       icon={<Icon as={RiExternalLinkLine} fontSize='xl' />}
                       _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
                     />

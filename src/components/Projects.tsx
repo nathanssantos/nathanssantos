@@ -79,12 +79,13 @@ const Projects = ({ projects }: ProjectsProps) => {
                     {t(`list.${item.name}.description`)}
                   </Text>
                 </Flex>
-                <Flex
-                  align='center'
-                  justify='space-between'
-                  _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
-                >
-                  <Text fontSize='sm' fontWeight='bold' transition='0.2s'>
+                <Flex align='center' justify='space-between'>
+                  <Text
+                    fontSize='sm'
+                    fontWeight='bold'
+                    transition='0.2s'
+                    _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
+                  >
                     {item.language}
                   </Text>
                   <Flex gap={2}>
@@ -95,7 +96,9 @@ const Projects = ({ projects }: ProjectsProps) => {
                         target='_blank'
                         aria-label='Homepage Link'
                         variant='ghost'
+                        size='sm'
                         icon={<Icon as={RiExternalLinkLine} fontSize='xl' />}
+                        _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
                       />
                     )}
                     <IconButton
@@ -104,7 +107,9 @@ const Projects = ({ projects }: ProjectsProps) => {
                       target='_blank'
                       aria-label='Github Link'
                       variant='ghost'
+                      size='sm'
                       icon={<Icon as={RiGithubLine} fontSize='xl' />}
+                      _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
                     />
                   </Flex>
                 </Flex>
