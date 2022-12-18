@@ -65,6 +65,7 @@ const Contact = () => {
               variant='outline'
               color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
               borderColor={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+              fontFamily='Roboto Mono'
             >
               {t('button-label')}
             </Button>
