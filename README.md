@@ -52,4 +52,12 @@
   <a href="https://jestjs.io/">
    <img align="center" alt="Jest" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
   </a>
+  
+  <a href="https://www.ruby-lang.org/">
+   <img align="center" alt="Jest" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
+  </a>
+  
+  <a href="https://rubyonrails.org/">
+   <img align="center" alt="Jest" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg" />
+  </a> 
 </p>
