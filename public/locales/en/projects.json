@@ -10,14 +10,14 @@
     "podjs": {
       "description": "PodJS is a podcast app built with Next.js, MobX and Chakra UI."
     },
-    "clockify-teams": {
-      "description": "Team management app integrated with Clockify and built with React.js, MobX and Material UI. Used to generate warnings and send email reports about collaborators time entries."
-    },
     "react-native-ts-boilerplate": {
       "description": "WIP - Boilerplate for React Native applications built with MobX and Native Base."
     },
-    "svelte-ts-boilerplate": {
-      "description": "WIP - Boilerplate for Svelte.js applications built with Svelte Material UI."
+    "pure-components": {
+      "description": "WIP - Pure Components provides prebuild dependency-free ui components to help you build your projects faster."
+    },
+    "cash-io-backend": {
+      "description": "CashIO API built with Ruby on Rails on api-only mode."
     }
   }
 }
