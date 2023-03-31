@@ -1,6 +1,15 @@
-import { Button, Container, Flex, Text, useColorMode } from '@chakra-ui/react';
+import {
+  Button,
+  Container,
+  Flex,
+  Icon,
+  IconButton,
+  Text,
+  useColorMode,
+} from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { Fade } from 'react-awesome-reveal';
+import { RiGithubLine, RiInstagramLine, RiLinkedinLine, RiMailLine } from 'react-icons/ri';
 
 const Contact = () => {
   const { t } = useTranslation('contact');
@@ -39,6 +48,48 @@ const Contact = () => {
               <Text textAlign='center' fontSize={{ base: 'sm', md: 'md' }}>
                 {t('description-2')}
               </Text>
+            </Flex>
+
+            <Flex align='center' gap={4}>
+              <IconButton
+                as='a'
+                aria-label='Github'
+                variant='ghost'
+                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+                href='https://github.com/nathanssantos/'
+                target='_blank'
+              >
+                <Icon as={RiGithubLine} fontSize='1.5rem' />
+              </IconButton>
+              <IconButton
+                as='a'
+                aria-label='Instagram'
+                variant='ghost'
+                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+                href='https://www.instagram.com/nathanssantosdev/'
+                target='_blank'
+              >
+                <Icon as={RiInstagramLine} fontSize='1.5rem' />
+              </IconButton>
+              <IconButton
+                as='a'
+                aria-label='LinkedIn'
+                variant='ghost'
+                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+                href='https://www.linkedin.com/in/nathan-s-santos-4b2637163/'
+                target='_blank'
+              >
+                <Icon as={RiLinkedinLine} fontSize='1.5rem' />
+              </IconButton>
+              <IconButton
+                as='a'
+                aria-label='E-mail'
+                variant='ghost'
+                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+                href='mailto:nathansilvasantos@gmail.com'
+              >
+                <Icon as={RiMailLine} fontSize='1.5rem' />
+              </IconButton>
             </Flex>
             <Button
               as='a'
