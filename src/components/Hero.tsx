@@ -1,36 +1,21 @@
-import {
-  Box,
-  BoxProps,
-  chakra,
-  Container,
-  Flex,
-  Text,
-  useColorMode,
-  shouldForwardProp,
-} from '@chakra-ui/react';
-import { motion, isValidMotionProp } from 'framer-motion';
+import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { observer } from 'mobx-react';
 import { useTranslation } from 'next-i18next';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useStore } from 'src/hooks';
-
-const ChakraBox = chakra(motion.div, {
-  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
 const Hero = () => {
   const { t } = useTranslation('hero');
   const { colorMode } = useColorMode();
   const { uiStore } = useStore();
   const nameRef = useRef(null);
-  const heroRef = useRef<HTMLDivElement>(null);
-  const [contentOpacity, setContentOpacity] = useState(100);
-  const [contentRotation, setContentRotation] = useState(0);
 
-  const { logo, scrollIcon } = uiStore;
+  const { logo } = uiStore;
 
-  const handleHeaderToggleLogo = () => {
+  useEffect(() => {
+    if (!nameRef.current) return;
+
     const nameElement = nameRef.current;
 
     const observer = new IntersectionObserver(
@@ -43,34 +28,7 @@ const Hero = () => {
       },
     );
 
-    if (!nameElement) return observer;
-
     observer.observe(nameElement);
-
-    return observer;
-  };
-
-  const handleToggleHeroContent = () => {
-    const heroElement = heroRef.current;
-
-    if (!heroElement) return;
-
-    window.addEventListener('scroll', () => {
-      setContentOpacity(1 - (window.scrollY / heroElement.clientHeight) * 3);
-      setContentRotation((window.scrollY / heroElement.clientHeight) * 100);
-
-      console.log((window.scrollY / heroElement.clientHeight) * 100);
-    });
-  };
-
-  useEffect(() => {
-    handleToggleHeroContent();
-
-    const nameElement = nameRef.current;
-
-    if (!nameElement) return;
-
-    const observer = handleHeaderToggleLogo();
 
     return () => {
       observer.unobserve(nameElement);
@@ -78,23 +36,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <Flex position='relative' height='calc(100vh - 4.813rem)' ref={heroRef}>
+    <Flex position='relative' height='calc(100vh - 4.25rem)'>
       <Container
         w='full'
         maxW='container.xl'
         display='flex'
         flexDirection='column'
         justifyContent='center'
-        px={{ base: 4, md: 24 }}
+        px={{ base: '3.625rem', lg: '8.25rem' }}
         pt={8}
         pb={48}
       >
-        <Flex
-          flexDirection='column'
-          justifyContent='center'
-          opacity={contentOpacity}
-          transition='0.1s'
-        >
+        <Flex flexDirection='column' justifyContent='center'>
           <Fade cascade triggerOnce duration={200} delay={1600}>
             <Text
               fontSize={{ base: 'md', md: 'lg' }}
@@ -170,40 +123,6 @@ const Hero = () => {
               </Text>
             </Text>
           </Fade>
-        </Flex>
-        <Flex
-          as='a'
-          href='#about'
-          position='absolute'
-          left='50%'
-          bottom={8}
-          width='1.25rem'
-          height='1.875rem'
-          boxShadow={`inset 0 0 0 0.063rem ${colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'}`}
-          borderRadius='1.563rem'
-          transition='0.25s'
-          opacity={scrollIcon.isOpen ? 1 : 0}
-          transform={`translateX(-50%) ${scrollIcon.isOpen ? 'scale(1)' : 'scale(0)'}`}
-        >
-          <ChakraBox
-            position='absolute'
-            left='50%'
-            transform='translateX(-50%)'
-            display='flex'
-            width='1'
-            height='2'
-            bg={colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'}
-            borderRadius='1.563rem'
-            animate={{
-              top: ['0.3rem', '0.5rem', '0.3rem'],
-            }}
-            // @ts-ignore
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              repeatType: 'loop',
-            }}
-          />
         </Flex>
       </Container>
     </Flex>

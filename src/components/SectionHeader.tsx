@@ -13,32 +13,12 @@ const SectionHeader = ({ children, center = false }: SectionHeaderProps) => {
     <Flex
       align='center'
       gap={4}
-      fontWeight={500}
-      fontSize={{ base: 'xl', md: '2xl' }}
-      fontFamily='Roboto Mono'
+      fontSize={{ base: '1.75rem', lg: '4rem' }}
       color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-      _after={{
-        content: `""`,
-        h: '0.063rem',
-        flex: 1,
-        mt: 1,
-        bg: `linear-gradient(to right, transparent, ${
-          colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'
-        })`,
-      }}
-      _before={
-        center
-          ? {
-              content: `""`,
-              h: '0.063rem',
-              flex: 1,
-              mt: 1,
-              bg: `linear-gradient(to left, transparent, ${
-                colorMode === 'dark' ? '#cbcbcb' : '#8b8b8b'
-              })`,
-            }
-          : undefined
-      }
+      sx={{ writingMode: 'vertical-lr' }}
+      transform='rotate(180deg)'
+      textTransform='uppercase'
+      fontFamily='Roboto Mono'
     >
       {children}
     </Flex>

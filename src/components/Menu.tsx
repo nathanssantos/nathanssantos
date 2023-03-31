@@ -16,7 +16,7 @@ const Menu = ({ vertical = false }: MenuProps) => {
       label: t('about'),
     },
     {
-      id: 'jobs',
+      id: 'experience',
       label: t('experience'),
     },
     {

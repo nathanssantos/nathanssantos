@@ -1,5 +1,5 @@
 {
-  "title": "My open source projects",
+  "title": "Projects",
   "list": {
     "evolution-graph": {
       "description": "Highly customizable, animated and responsive evolution graph implementation. The package is used to create flexible data visualizations and present evolution relationships between entities."
