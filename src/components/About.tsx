@@ -159,6 +159,28 @@ const About = () => {
                   >
                     Cypress
                   </Flex>
+                  <Flex
+                    as='li'
+                    gap={1}
+                    align='center'
+                    _before={{
+                      content: `"▹"`,
+                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
+                    }}
+                  >
+                    Ruby
+                  </Flex>
+                  <Flex
+                    as='li'
+                    gap={1}
+                    align='center'
+                    _before={{
+                      content: `"▹"`,
+                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
+                    }}
+                  >
+                    Rails
+                  </Flex>
                 </Flex>
               </Flex>
             </Fade>
