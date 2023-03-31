@@ -23,11 +23,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     const favoriteRepositories = [
       'evolution-graph',
+      'pure-components',
       'react-ts-boilerplate',
-      'podjs',
-      'clockify-teams',
       'react-native-ts-boilerplate',
-      'svelte-ts-boilerplate',
+      'podjs',
+      'cash-io-backend',
     ];
 
     const filteredRepositories = data.filter(({ name }: Repository) =>

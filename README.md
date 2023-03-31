@@ -28,7 +28,7 @@
   <a href="https://www.typescriptlang.org/">
     <img align="center" alt="TypeScript" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
   </a>
-  
+
   <a href="https://reactjs.org/">
     <img align="center" alt="React.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg">
   </a>
@@ -56,12 +56,12 @@
   <a href="https://jestjs.io/">
    <img align="center" alt="Jest" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
   </a>
-  
+
   <a href="https://www.ruby-lang.org/">
    <img align="center" alt="Ruby" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
   </a>
-  
+
   <a href="https://rubyonrails.org/">
    <img align="center" alt="Rails" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg" />
-  </a> 
+  </a>
 </p>

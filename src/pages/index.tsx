@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useColorMode } from '@chakra-ui/react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import axios from 'axios';
 import Head from 'next/head';
@@ -21,7 +21,7 @@ type HomeProps = {
   repositories: Repository[];
 };
 
-const Homepage = ({ repositories }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { setColorMode } = useColorMode();
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Homepage = ({ repositories }: InferGetStaticPropsType<typeof getStaticProp
   );
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
+export const getServerSideProps: GetServerSideProps<HomeProps> = async ({ locale }) => {
   const localeData = await serverSideTranslations(locale ?? 'en', [
     'common',
     'header',
@@ -74,7 +74,6 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
           ...localeData,
           repositories: [],
         },
-        revalidate: 60 * 60 * 1, // 1 hour
       };
     }
 
@@ -90,7 +89,6 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
         ...localeData,
         repositories: [],
       },
-      revalidate: 60 * 60 * 1, // 1 hour
     };
   }
 };
