@@ -12,7 +12,7 @@ import {
   Footer,
   Header,
   Hero,
-  Jobs,
+  Experience,
   Projects,
   RooStoreProvider,
 } from '@/components';
@@ -40,7 +40,7 @@ const Homepage = ({ repositories }: InferGetStaticPropsType<typeof getStaticProp
         <Background />
         <Hero />
         <About />
-        <Jobs />
+        <Experience />
         {!!repositories.length && <Projects projects={repositories} />}
         <Contact />
       </main>
@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     'header',
     'hero',
     'about',
-    'jobs',
+    'experience',
     'projects',
     'contact',
     'footer',

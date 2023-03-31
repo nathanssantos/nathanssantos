@@ -1,3 +1,3 @@
-import jobs from './jobs';
+import experience from './experience';
 
-export { jobs };
+export { experience };

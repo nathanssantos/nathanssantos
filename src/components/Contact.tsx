@@ -1,39 +1,10 @@
-import { Avatar, Button, Container, Flex, Text, useColorMode } from '@chakra-ui/react';
+import { Button, Container, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import React, { useRef, useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { useStore } from 'src/hooks';
-import SectionHeader from './SectionHeader';
 
 const Contact = () => {
   const { t } = useTranslation('contact');
   const { colorMode } = useColorMode();
-  const avatarRef = useRef(null);
-  const { uiStore } = useStore();
-
-  const { toggle } = uiStore.scrollIcon;
-
-  useEffect(() => {
-    if (!avatarRef.current) return;
-
-    const avatarElement = avatarRef.current;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => toggle(entry.isIntersecting));
-      },
-      {
-        root: null,
-        threshold: 0,
-      },
-    );
-
-    observer.observe(avatarElement);
-
-    return () => {
-      observer.observe(avatarElement);
-    };
-  }, []);
 
   return (
     <Flex id='contact'>
@@ -42,6 +13,7 @@ const Contact = () => {
         maxW='container.xl'
         display='flex'
         flexDirection='column'
+        alignItems='center'
         justifyContent='center'
         px={{ base: 4, md: 24 }}
         pt={24}
@@ -49,7 +21,16 @@ const Contact = () => {
         gap={8}
       >
         <Fade cascade triggerOnce duration={200}>
-          <SectionHeader center>{t('title')}</SectionHeader>
+          <Flex
+            align='center'
+            gap={4}
+            fontSize={{ base: '2rem', lg: '2.5rem' }}
+            color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
+            textTransform='uppercase'
+            fontFamily='Roboto Mono'
+          >
+            {t('title')}
+          </Flex>
           <Flex direction='column' align='center' justify='center' gap={12}>
             <Flex direction='column'>
               <Text textAlign='center' fontSize={{ base: 'sm', md: 'md' }}>
