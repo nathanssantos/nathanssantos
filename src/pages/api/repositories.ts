@@ -24,8 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const favoriteRepositories = [
       'evolution-graph',
       'pure-components',
-      'react-ts-boilerplate',
-      'react-native-ts-boilerplate',
+      'react-boilerplate',
+      'react-native-boilerplate',
       'podjs',
       'cash-io-backend',
     ];
