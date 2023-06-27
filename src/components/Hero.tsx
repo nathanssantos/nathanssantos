@@ -93,7 +93,7 @@ const Hero = () => {
               {t('description-2')}{' '}
               <Text
                 as='a'
-                href='https://w16.dev/'
+                href='https://www.clint.digital/'
                 target='_blank'
                 color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
                 cursor='pointer'
