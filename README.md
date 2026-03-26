@@ -14,7 +14,7 @@
 
 <p align="center">
   Fullstack Software Engineer with 8+ years of experience building high-performance web and desktop applications.<br />
-  Focused on clean architecture, type safety, and delivering polished user experiences.
+  Focused on clean architecture, performance, and delivering polished user experiences.
 </p>
 
 <br />
