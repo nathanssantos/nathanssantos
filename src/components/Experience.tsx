@@ -73,6 +73,11 @@ const Experience = () => {
                       h='100%'
                       w='100%'
                       objectFit='contain'
+                      filter={
+                        item.logo.endsWith('.svg') && colorMode === 'dark'
+                          ? 'brightness(0) invert(1)'
+                          : undefined
+                      }
                     />
                   </Flex>
                   <Flex direction='column' w='full'>

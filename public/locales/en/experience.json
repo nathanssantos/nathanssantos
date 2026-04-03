@@ -1,6 +1,10 @@
 {
   "title": "Experience",
   "list": {
+    "clint": {
+      "description-1": "CRM and sales automation platform serving thousands of businesses across Brazil. Built for high-volume messaging, pipeline management, and team collaboration.",
+      "description-2": "Led the React 16→19 migration, built a Chakra UI 3 design system replacing Bootstrap 4, and shipped key features including Subscriptions, Payments, Permissions, Chat, Automations, and AI integrations. Also upgraded the Node.js backend, set up monorepo tooling, and established the testing infrastructure (unit + e2e)."
+    },
     "rokkos": {
       "description-1": "Marketplace for photographers where they show, sell and deliver their photos during events. The platform also uses facial recognition to help customers find photos in which they are present.",
       "description-2": "I led the team that created Rokkos from scratch, built the front-end, and helped the designers to develop several features to improve user experience."

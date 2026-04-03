@@ -1,5 +1,12 @@
 const experience: Job[] = [
   {
+    key: 'clint',
+    name: 'Clint Digital',
+    logo: '/images/experience/clint.svg',
+    url: 'https://www.clint.digital/',
+    tags: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Chakra UI'],
+  },
+  {
     key: 'rokkos',
     name: 'Rokkos',
     logo: '/images/experience/rokkos.png',

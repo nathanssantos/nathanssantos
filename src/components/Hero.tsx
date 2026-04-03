@@ -89,39 +89,7 @@ const Hero = () => {
               {t('conclusion')}.
             </Text>
             <Text fontSize={{ base: 'sm', md: 'md' }}>{t('description')}</Text>
-            <Text fontSize={{ base: 'sm', md: 'md' }}>
-              {t('description-2')}{' '}
-              <Text
-                as='a'
-                href='https://www.clint.digital/'
-                target='_blank'
-                color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-                cursor='pointer'
-                position='relative'
-                _after={{
-                  content: `""`,
-                  position: 'absolute',
-                  bottom: '-0.15rem',
-                  transform: 'translateX(-50%)',
-                  left: '50%',
-                  h: '0.063rem',
-                  w: 0,
-                  bg: `linear-gradient(to right, transparent, ${
-                    colorMode === 'dark' ? '#64ffda' : '#5374fa'
-                  }, transparent)`,
-                  transition: 'all 0.2s ease-in-out 0s',
-                }}
-                sx={{
-                  '&:hover': {
-                    '&::after': {
-                      width: '100%',
-                    },
-                  },
-                }}
-              >
-                {t('company')}.
-              </Text>
-            </Text>
+            <Text fontSize={{ base: 'sm', md: 'md' }}>{t('description-2')}</Text>
           </Fade>
         </Flex>
       </Container>

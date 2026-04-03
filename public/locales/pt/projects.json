@@ -2,22 +2,22 @@
   "title": "Projetos",
   "list": {
     "evolution-graph": {
-      "description": "Implementação de gráfico de evolução altamente customizável, animada e responsiva. Este pacote é utilizado para visualizar dados de maneira flexível e apresentar relações de evolução entre entidades."
+      "description": "Biblioteca de visualização de dados animada, responsiva e sem dependências. Publicada no npm."
     },
-    "react-ts-boilerplate": {
-      "description": "WIP - Boilerplate para aplicações React.js construído com MobX e Chakra UI."
+    "react-boilerplate": {
+      "description": "Boilerplate para aplicações React com MobX, Chakra UI e Vite."
     },
     "podjs": {
-      "description": "PodJS é um agregador de podcasts construído com Next.js, MobX e Chakra UI."
+      "description": "Agregador de podcasts open source construído com Next.js, MobX e Chakra UI."
     },
-    "react-native-ts-boilerplate": {
-      "description": "WIP - Boilerplate para aplicações React Native construído com MobX e Native Base."
+    "clockify-teams": {
+      "description": "Dashboard para acompanhamento de performance de equipes usando a API do Clockify."
     },
     "pure-components": {
-      "description": "Pure Components provê componentes livres de dependências para ajudar você a construir seu projeto mais rápido."
+      "description": "Biblioteca de componentes UI sem dependências com 17 componentes e 99% de cobertura de testes."
     },
-    "cash-io-backend": {
-      "description": "API da aplicação CashIO construída com Ruby on Rails em modo api-only."
+    "react-native-boilerplate": {
+      "description": "Boilerplate para aplicações React Native com NativeBase e MobX."
     }
   }
 }
