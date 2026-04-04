@@ -16,8 +16,8 @@
     "pure-components": {
       "description": "Dependency-free UI component library with 17 components and 99% test coverage."
     },
-    "react-native-boilerplate": {
-      "description": "Boilerplate for React Native applications with NativeBase and MobX."
+    "marketmind": {
+      "description": "Open-source algorithmic trading desktop app with advanced chart visualization, automated setup detection, backtesting engine, and multi-exchange support."
     }
   }
 }

@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       'podjs',
       'clockify-teams',
       'pure-components',
-      'react-native-boilerplate',
+      'marketmind',
     ];
 
     const filteredRepositories = data.filter(({ name }: Repository) =>
