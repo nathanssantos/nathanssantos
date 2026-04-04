@@ -42,6 +42,21 @@
 
 <table align="center">
   <tr>
+    <td align="center" width="600" colspan="2">
+      <a href="https://github.com/nathanssantos/marketmind">
+        <strong>MarketMind</strong>
+      </a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://marketmind-app.vercel.app">Website</a>
+      <br /><br />
+      Open-source algorithmic trading desktop app with advanced chart visualization, 105 strategies, backtesting engine, and multi-exchange support (Binance + Interactive Brokers). Built with Electron, React, TypeScript, Fastify, tRPC, PostgreSQL, and Canvas API. 7,200+ tests.
+      <br /><br />
+      <img src="https://img.shields.io/github/stars/nathanssantos/marketmind?style=flat-square" />
+      <img src="https://img.shields.io/badge/tests-7,200%2B-brightgreen?style=flat-square" />
+      <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" />
+    </td>
+  </tr>
+  <tr>
     <td align="center" width="300">
       <a href="https://github.com/nathanssantos/evolution-graph">
         <strong>evolution-graph</strong>
@@ -52,6 +67,17 @@
       <img src="https://img.shields.io/github/stars/nathanssantos/evolution-graph?style=flat-square" />
     </td>
     <td align="center" width="300">
+      <a href="https://github.com/nathanssantos/pure-components">
+        <strong>pure-components</strong>
+      </a>
+      <br /><br />
+      Dependency-free, reusable UI component library built with TypeScript. 99% test coverage.
+      <br /><br />
+      <img src="https://img.shields.io/github/stars/nathanssantos/pure-components?style=flat-square" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="300">
       <a href="https://github.com/nathanssantos/podjs">
         <strong>podjs</strong>
       </a>
@@ -59,17 +85,6 @@
       Open source podcast app built with Next.js, MobX, and Chakra UI.
       <br /><br />
       <img src="https://img.shields.io/github/stars/nathanssantos/podjs?style=flat-square" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="300">
-      <a href="https://github.com/nathanssantos/pure-components">
-        <strong>pure-components</strong>
-      </a>
-      <br /><br />
-      Dependency-free, reusable UI component library built with TypeScript.
-      <br /><br />
-      <img src="https://img.shields.io/github/stars/nathanssantos/pure-components?style=flat-square" />
     </td>
     <td align="center" width="300">
       <a href="https://github.com/nathanssantos/clockify-teams">
