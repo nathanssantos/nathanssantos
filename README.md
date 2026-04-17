@@ -76,24 +76,4 @@
       <img src="https://img.shields.io/github/stars/nathanssantos/pure-components?style=flat-square" />
     </td>
   </tr>
-  <tr>
-    <td align="center" width="300">
-      <a href="https://github.com/nathanssantos/podjs">
-        <strong>podjs</strong>
-      </a>
-      <br /><br />
-      Open source podcast app built with Next.js, MobX, and Chakra UI.
-      <br /><br />
-      <img src="https://img.shields.io/github/stars/nathanssantos/podjs?style=flat-square" />
-    </td>
-    <td align="center" width="300">
-      <a href="https://github.com/nathanssantos/clockify-teams">
-        <strong>clockify-teams</strong>
-      </a>
-      <br /><br />
-      Team management app with automated performance reports and email alerts.
-      <br /><br />
-      <img src="https://img.shields.io/github/stars/nathanssantos/clockify-teams?style=flat-square" />
-    </td>
-  </tr>
 </table>
