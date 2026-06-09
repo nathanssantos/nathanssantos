@@ -35,14 +35,14 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
           name='description'
-          content='Software Engineer — React, Node.js, TypeScript & AI. Portfolio of Nathan S. Santos.'
+          content='Software Engineer with 7+ years building web, mobile and desktop products with React, Node.js, TypeScript and AI. Portfolio of Nathan S. Santos — projects, open source and experience.'
         />
 
         <meta property='og:type' content='website' key='og:type' />
         <meta property='og:title' content='Nathan S. Santos' key='og:title' />
         <meta
           property='og:description'
-          content='Software Engineer — React, Node.js, TypeScript & AI. Portfolio of Nathan S. Santos.'
+          content='Software Engineer with 7+ years building web, mobile and desktop products with React, Node.js, TypeScript and AI. Portfolio of Nathan S. Santos — projects, open source and experience.'
           key='og:description'
         />
         <meta property='og:url' content='https://nathanssantos.vercel.app/' key='og:url' />
@@ -56,7 +56,7 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
         <meta name='twitter:title' content='Nathan S. Santos' key='twitter:title' />
         <meta
           name='twitter:description'
-          content='Software Engineer — React, Node.js, TypeScript & AI. Portfolio of Nathan S. Santos.'
+          content='Software Engineer with 7+ years building web, mobile and desktop products with React, Node.js, TypeScript and AI. Portfolio of Nathan S. Santos — projects, open source and experience.'
           key='twitter:description'
         />
         <meta
