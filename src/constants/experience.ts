@@ -4,7 +4,7 @@ const experience: Job[] = [
     name: 'Clint Digital',
     logo: '/images/experience/clint.svg',
     url: 'https://www.clint.digital/',
-    tags: ['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Chakra UI'],
+    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Chakra UI'],
   },
   {
     key: 'rokkos',
