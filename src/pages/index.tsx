@@ -51,6 +51,13 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
           content='https://nathanssantos.vercel.app/images/me.jpg'
           key='og:image'
         />
+        <meta name='author' content='Nathan S. Santos' key='author' />
+        <meta property='article:author' content='Nathan S. Santos' key='article:author' />
+        <meta
+          property='article:published_time'
+          content='2026-06-09T00:00:00-03:00'
+          key='article:published_time'
+        />
 
         <meta name='twitter:card' content='summary' key='twitter:card' />
         <meta name='twitter:title' content='Nathan S. Santos' key='twitter:title' />
