@@ -33,7 +33,37 @@ const Homepage = ({ repositories }: InferGetServerSidePropsType<typeof getServer
       <Head>
         <title>Nathan S. Santos</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta property='og:title' content='Nathan S. Santos' key='title' />
+        <meta
+          name='description'
+          content='Software Engineer — React, Node.js, TypeScript & AI. Portfolio of Nathan S. Santos.'
+        />
+
+        <meta property='og:type' content='website' key='og:type' />
+        <meta property='og:title' content='Nathan S. Santos' key='og:title' />
+        <meta
+          property='og:description'
+          content='Software Engineer — React, Node.js, TypeScript & AI. Portfolio of Nathan S. Santos.'
+          key='og:description'
+        />
+        <meta property='og:url' content='https://nathanssantos.vercel.app/' key='og:url' />
+        <meta
+          property='og:image'
+          content='https://nathanssantos.vercel.app/images/me.jpg'
+          key='og:image'
+        />
+
+        <meta name='twitter:card' content='summary' key='twitter:card' />
+        <meta name='twitter:title' content='Nathan S. Santos' key='twitter:title' />
+        <meta
+          name='twitter:description'
+          content='Software Engineer — React, Node.js, TypeScript & AI. Portfolio of Nathan S. Santos.'
+          key='twitter:description'
+        />
+        <meta
+          name='twitter:image'
+          content='https://nathanssantos.vercel.app/images/me.jpg'
+          key='twitter:image'
+        />
       </Head>
       <Header />
       <main>
