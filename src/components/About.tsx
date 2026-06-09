@@ -46,141 +46,37 @@ const About = () => {
                   direction='column'
                   wrap='wrap'
                   maxH={{ base: '7rem', lg: '8.5rem' }}
-                  maxW='22rem'
+                  maxW='30rem'
                   gap={1}
+                  columnGap={6}
                 >
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    JavaScript (ES6+)
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    TypeScript
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    React.js
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    React Native
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Next.js
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Svelte
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Electron.js
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Node.js
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Jest
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Cypress
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Ruby
-                  </Flex>
-                  <Flex
-                    as='li'
-                    gap={1}
-                    align='center'
-                    _before={{
-                      content: `"▹"`,
-                      color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                    }}
-                  >
-                    Rails
-                  </Flex>
+                  {[
+                    'TypeScript',
+                    'React / React Native',
+                    'Next.js',
+                    'Electron',
+                    'Node.js',
+                    'Fastify / tRPC',
+                    'PostgreSQL',
+                    'Canvas API',
+                    'Vitest / Cypress',
+                    'Chakra UI',
+                    'Zustand / MobX',
+                    'pnpm Monorepo',
+                  ].map((tech) => (
+                    <Flex
+                      key={tech}
+                      as='li'
+                      gap={1}
+                      align='center'
+                      _before={{
+                        content: `"▹"`,
+                        color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
+                      }}
+                    >
+                      {tech}
+                    </Flex>
+                  ))}
                 </Flex>
               </Flex>
             </Fade>

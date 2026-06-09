@@ -47,8 +47,11 @@ const Menu = ({ vertical = false }: MenuProps) => {
               </Button>
             </li>
           ))}
-          {/* <li>
+          <li>
             <Button
+              as='a'
+              href='/Resume-Nathan_Silva_Santos.pdf'
+              target='_blank'
               size='sm'
               variant='ghost'
               fontWeight={500}
@@ -56,7 +59,7 @@ const Menu = ({ vertical = false }: MenuProps) => {
             >
               {t('resume')}
             </Button>
-          </li> */}
+          </li>
         </Fade>
       </Flex>
     </Box>

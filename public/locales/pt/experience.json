@@ -1,6 +1,10 @@
 {
   "title": "Experiência",
   "list": {
+    "clint": {
+      "description-1": "Plataforma de CRM e automação de vendas utilizada por milhares de empresas no Brasil. Focada em envio de mensagens em alto volume, gestão de pipeline e colaboração entre equipes.",
+      "description-2": "Liderei a migração de React 16→19, criei o design system com Chakra UI 3 substituindo Bootstrap 4, e entreguei funcionalidades-chave como Assinaturas, Pagamentos, Permissões, Chat, Automações e integrações com IA. Também atualizei o backend Node.js, configurei o monorepo e estabeleci a infraestrutura de testes (unitários + e2e)."
+    },
     "rokkos": {
       "description-1": "Marketplace para fotógrafos onde eles exibem, vendem e entregam suas fotos durantes eventos. A plataforma também utiliza reconhecimento facial para ajudar clientes a encontrar fotos nas quais estão presentes.",
       "description-2": "Liderei o time que criou a Rokkos do zero, construí todo o front-end e auxilei os designers a desenvolverem diversas funcionalidades com o intuito de melhorar a expereiência do usuário."

@@ -1,67 +1,79 @@
-<p>
-  <h1 align="center">Hi, I'm Nathan.</h1>
-</p>
+<h1 align="center">Nathan S. Santos</h1>
 
 <p align="center">
   <a href="mailto:nathansilvasantos@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
-  </a>
-  &nbsp;
+  </a>&nbsp;
   <a href="https://www.linkedin.com/in/nathan-s-santos-4b2637163/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>&nbsp;
+  <a href="https://nathanssantos.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
   </a>
-  &nbsp;
 </p>
-
-<p align="center">Software engineer with 4+ years of experience specializing in building high-quality digital products.<br />Passionate about learning, applying new technologies, and constantly improving my skills. As a developer, I aim to write clean code which can be easily read, tested, maintained, reused and extended. I am highly committed to my work, always doing my best to push initiatives to successful completion.</p>
-
-<br />
-
-<h4 align="center">
-  Take a look at <a href="https://nathanssantos.vercel.app/">my portfolio</a>!
-</h4>
-
-<br />
-<br />
 
 <p align="center">
-  <a href="https://www.typescriptlang.org/">
-    <img align="center" alt="TypeScript" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
-  </a>
-
-  <a href="https://reactjs.org/">
-    <img align="center" alt="React.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg">
-  </a>
-
-  <a href="https://nextjs.org/">
-    <img align="center" alt="Next.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
-  </a>
-
-  <a href="https://svelte.dev/">
-   <img align="center" alt="Svelte.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" />
-  </a>
-
-  <a href="https://vuejs.org/">
-    <img align="center" alt="Vue.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
-  </a>
-
-  <a href="https://www.electronjs.org/">
-    <img align="center" alt="Electron.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" />
-  </a>
-
-  <a href="https://nodejs.org/">
-    <img align="center" alt="Node.js" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-  </a>
-
-  <a href="https://jestjs.io/">
-   <img align="center" alt="Jest" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
-  </a>
-
-  <a href="https://www.ruby-lang.org/">
-   <img align="center" alt="Ruby" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
-  </a>
-
-  <a href="https://rubyonrails.org/">
-   <img align="center" alt="Rails" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg" />
-  </a>
+  Fullstack Software Engineer with 8+ years of experience building high-performance web and desktop applications.<br />
+  Focused on clean architecture, performance, and delivering polished user experiences.
 </p>
+
+<br />
+
+<h3 align="center">Tech Stack</h3>
+
+<p align="center">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
+  <img alt="React Native" src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" />
+  <img alt="Electron" src="https://img.shields.io/badge/Electron-2B2E3A?style=flat-square&logo=electron&logoColor=9FEAF9" />
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
+  <img alt="Fastify" src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" />
+  <img alt="tRPC" src="https://img.shields.io/badge/tRPC-2596BE?style=flat-square&logo=trpc&logoColor=white" />
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
+  <img alt="Vitest" src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white" />
+  <img alt="Canvas API" src="https://img.shields.io/badge/Canvas_API-FF6F00?style=flat-square&logo=html5&logoColor=white" />
+</p>
+
+<br />
+
+<h3 align="center">Highlights</h3>
+
+<table align="center">
+  <tr>
+    <td align="center" width="600" colspan="2">
+      <a href="https://github.com/nathanssantos/marketmind">
+        <strong>MarketMind</strong>
+      </a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://marketmind-app.vercel.app">Website</a>
+      <br /><br />
+      Open-source algorithmic trading desktop app with advanced chart visualization, 105 strategies, backtesting engine, and multi-exchange support (Binance + Interactive Brokers). Built with Electron, React, TypeScript, Fastify, tRPC, PostgreSQL, and Canvas API. 7,200+ tests.
+      <br /><br />
+      <img src="https://img.shields.io/github/stars/nathanssantos/marketmind?style=flat-square" />
+      <img src="https://img.shields.io/badge/tests-7,200%2B-brightgreen?style=flat-square" />
+      <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="300">
+      <a href="https://github.com/nathanssantos/evolution-graph">
+        <strong>evolution-graph</strong>
+      </a>
+      <br /><br />
+      Animated, responsive, dependency-free data visualization library built with Vanilla JS.
+      <br /><br />
+      <img src="https://img.shields.io/github/stars/nathanssantos/evolution-graph?style=flat-square" />
+    </td>
+    <td align="center" width="300">
+      <a href="https://github.com/nathanssantos/pure-components">
+        <strong>pure-components</strong>
+      </a>
+      <br /><br />
+      Dependency-free, reusable UI component library built with TypeScript. 99% test coverage.
+      <br /><br />
+      <img src="https://img.shields.io/github/stars/nathanssantos/pure-components?style=flat-square" />
+    </td>
+  </tr>
+</table>
