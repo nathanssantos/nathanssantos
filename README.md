@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  Fullstack Software Engineer with 8+ years of experience building high-performance web and desktop applications.<br />
-  Focused on clean architecture, performance, and delivering polished user experiences.
+  Fullstack Software Engineer with 7+ years of experience building high-performance web and desktop applications.<br />
+  Focused on design systems, frontend infrastructure, developer experience, and AI-assisted development.
 </p>
 
 <br />
@@ -26,6 +26,7 @@
   <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
   <img alt="React Native" src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" />
+  <img alt="Chakra UI" src="https://img.shields.io/badge/Chakra_UI-319795?style=flat-square&logo=chakraui&logoColor=white" />
   <img alt="Electron" src="https://img.shields.io/badge/Electron-2B2E3A?style=flat-square&logo=electron&logoColor=9FEAF9" />
   <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
   <img alt="Fastify" src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" />
@@ -34,6 +35,7 @@
   <img alt="Vite" src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
   <img alt="Vitest" src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white" />
   <img alt="Canvas API" src="https://img.shields.io/badge/Canvas_API-FF6F00?style=flat-square&logo=html5&logoColor=white" />
+  <img alt="AI / LLMs" src="https://img.shields.io/badge/AI%20%2F%20LLMs-412991?style=flat-square&logo=openai&logoColor=white" />
 </p>
 
 <br />
@@ -74,6 +76,17 @@
       Dependency-free, reusable UI component library built with TypeScript. 99% test coverage.
       <br /><br />
       <img src="https://img.shields.io/github/stars/nathanssantos/pure-components?style=flat-square" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="600" colspan="2">
+      <a href="https://github.com/nathanssantos/ai-chat-boilerplate">
+        <strong>ai-chat-boilerplate</strong>
+      </a>
+      <br /><br />
+      Electron-based AI chat boilerplate with multi-provider support (OpenAI, Anthropic). Built with React, TypeScript, and tRPC.
+      <br /><br />
+      <img src="https://img.shields.io/github/stars/nathanssantos/ai-chat-boilerplate?style=flat-square" />
     </td>
   </tr>
 </table>
