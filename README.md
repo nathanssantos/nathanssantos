@@ -78,15 +78,4 @@
       <img src="https://img.shields.io/github/stars/nathanssantos/pure-components?style=flat-square" />
     </td>
   </tr>
-  <tr>
-    <td align="center" width="600" colspan="2">
-      <a href="https://github.com/nathanssantos/ai-chat-boilerplate">
-        <strong>ai-chat-boilerplate</strong>
-      </a>
-      <br /><br />
-      Electron-based AI chat boilerplate with multi-provider support (OpenAI, Anthropic). Built with React, TypeScript, and tRPC.
-      <br /><br />
-      <img src="https://img.shields.io/github/stars/nathanssantos/ai-chat-boilerplate?style=flat-square" />
-    </td>
-  </tr>
 </table>
