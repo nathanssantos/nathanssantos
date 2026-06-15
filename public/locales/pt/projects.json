@@ -17,7 +17,7 @@
       "description": "Biblioteca de componentes UI sem dependências com 17 componentes e 99% de cobertura de testes."
     },
     "marketmind": {
-      "description": "Aplicativo desktop open-source de trading algoritmico com visualizacao avancada de graficos, deteccao automatica de setups, motor de backtesting e suporte multi-exchange."
+      "description": "Aplicativo desktop open-source de trading algorítmico com visualização avançada de gráficos, detecção automática de setups, motor de backtesting e suporte multi-exchange."
     }
   }
 }

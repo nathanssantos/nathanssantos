@@ -7,8 +7,12 @@ type MenuProps = {
 };
 
 const Menu = ({ vertical = false }: MenuProps) => {
-  const { t } = useTranslation('header');
+  const { t, i18n } = useTranslation('header');
   const { colorMode } = useColorMode();
+
+  const resumeHref = i18n.language?.startsWith('pt')
+    ? '/CV-Nathan_Silva_Santos-PT.pdf'
+    : '/Resume-Nathan_Silva_Santos.pdf';
 
   const menu = [
     {
@@ -50,7 +54,7 @@ const Menu = ({ vertical = false }: MenuProps) => {
           <li>
             <Button
               as='a'
-              href='/Resume-Nathan_Silva_Santos.pdf'
+              href={resumeHref}
               target='_blank'
               size='sm'
               variant='ghost'
