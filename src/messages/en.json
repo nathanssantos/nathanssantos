@@ -70,6 +70,10 @@
     "description": "I’m a fullstack software engineer with 7+ years of experience building high-performance web and desktop applications.",
     "description-2": "Specialized in React, TypeScript, and Node.js, with a focus on design systems and AI-assisted development — currently open to new opportunities."
   },
+  "metadata": {
+    "title": "Nathan S. Santos — Software Engineer",
+    "description": "Software Engineer with 7+ years building web, mobile and desktop products with React, Node.js, TypeScript and AI. Portfolio of Nathan S. Santos — projects, open source and experience."
+  },
   "notFound": {
     "h1": "The page you are looking for is not available or doesn't belong to this website!",
     "title": "Page not found"

@@ -70,6 +70,10 @@
     "description": "Sou um desenvolvedor de software fullstack com mais de 7 anos de experiência construindo aplicações web e desktop de alta performance.",
     "description-2": "Especializado em React, TypeScript e Node.js, com foco em design systems e desenvolvimento potencializado por IA — atualmente aberto a novas oportunidades."
   },
+  "metadata": {
+    "title": "Nathan S. Santos — Engenheiro de Software",
+    "description": "Engenheiro de Software com mais de 7 anos construindo produtos web, mobile e desktop com React, Node.js, TypeScript e IA. Portfólio de Nathan S. Santos — projetos, open source e experiência."
+  },
   "notFound": {
     "h1": "A página que você procura não foi encontrada ou não pertence a este website!",
     "title": "Página não encontrada."

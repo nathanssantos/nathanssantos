@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter, Roboto_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 
+import site from '../../constants/site';
 import { routing } from '../../i18n/routing';
 import Providers from './providers';
 import '../globals.css';
@@ -16,27 +17,42 @@ const robotoMono = Roboto_Mono({
   display: 'swap',
 });
 
-const description =
-  'Software Engineer with 7+ years building web, mobile and desktop products with React, Node.js, TypeScript and AI. Portfolio of Nathan S. Santos — projects, open source and experience.';
+const ogLocales: Record<string, string> = { en: 'en_US', pt: 'pt_BR' };
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://nathanssantos.vercel.app'),
-  title: 'Nathan S. Santos',
-  description,
-  authors: [{ name: 'Nathan S. Santos' }],
-  openGraph: {
-    type: 'website',
-    title: 'Nathan S. Santos',
+type LayoutParams = { params: Promise<{ locale: string }> };
+
+export const generateMetadata = async ({ params }: LayoutParams): Promise<Metadata> => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const title = t('title');
+  const description = t('description');
+
+  return {
+    metadataBase: new URL(site.url),
+    title,
     description,
-    url: 'https://nathanssantos.vercel.app/',
-    images: ['/images/me.jpg'],
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Nathan S. Santos',
-    description,
-    images: ['/images/me.jpg'],
-  },
+    authors: [{ name: site.name }],
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: '/en', pt: '/pt' },
+    },
+    openGraph: {
+      type: 'website',
+      siteName: site.name,
+      title,
+      description,
+      url: `/${locale}`,
+      locale: ogLocales[locale],
+      alternateLocale: routing.locales
+        .filter((item) => item !== locale)
+        .map((item) => ogLocales[item]),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
 };
 
 export const generateStaticParams = () => routing.locales.map((locale) => ({ locale }));
