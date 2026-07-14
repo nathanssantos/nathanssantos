@@ -10,7 +10,6 @@ const experience: Job[] = [
     key: 'rokkos',
     name: 'Rokkos',
     logo: '/images/experience/rokkos.png',
-    url: 'https://web.rokkos.app',
     tags: ['React.js', 'MobX', 'Material UI', 'Sass'],
   },
   {
@@ -24,14 +23,12 @@ const experience: Job[] = [
     key: 'turno-inverso',
     name: 'Turno Inverso',
     logo: '/images/experience/turno-inverso.png',
-    url: 'https://play.google.com/store/apps/details?id=br.com.turnoinverso.aluno',
     tags: ['React Native', 'MobX', 'Native Base'],
   },
   {
     key: 'lets-hike',
     name: "Let's Hike",
     logo: '/images/experience/lets-hike.webp',
-    url: 'https://play.google.com/store/apps/details?id=br.com.floripahike.app&hl=pt_BR&gl=US',
     tags: ['React Native', 'Redux', 'Native Base'],
   },
   {
@@ -45,7 +42,6 @@ const experience: Job[] = [
     key: 'we-play',
     name: 'We Play',
     logo: '/images/experience/we-play.png',
-    url: 'https://play.google.com/store/apps/details?id=br.com.w16.letsplayapp',
     tags: ['React Native', 'MobX', 'Native Base'],
   },
   {

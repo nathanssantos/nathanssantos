@@ -17,6 +17,6 @@ type Job = {
   key: string;
   name: string;
   logo: string;
-  url: string;
+  url?: string;
   tags: string[];
 };
