@@ -8,7 +8,7 @@ import Reveal from './Reveal';
 
 const Hero = () => {
   const t = useTranslations('hero');
-  const nameRef = useRef<HTMLSpanElement>(null);
+  const nameRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const element = nameRef.current;
@@ -35,12 +35,12 @@ const Hero = () => {
             {t('salutation')}
           </p>
           <div className='mb-2 -ml-[0.15rem] flex'>
-            <span
+            <h1
               ref={nameRef}
-              className='bg-clip-text text-5xl leading-none font-black text-transparent [background-image:linear-gradient(120deg,#5374fa_50%,#64ffda_90%)] md:text-7xl dark:[background-image:linear-gradient(120deg,#64ffda_20%,#5374fa_60%)]'
+              className='m-0 bg-clip-text text-5xl leading-none font-black text-transparent [background-image:linear-gradient(120deg,#5374fa_50%,#64ffda_90%)] md:text-7xl dark:[background-image:linear-gradient(120deg,#64ffda_20%,#5374fa_60%)]'
             >
               {t('name')}.
-            </span>
+            </h1>
           </div>
           <p className='mb-3 -ml-[0.05rem] text-2xl leading-none font-black md:mb-6 md:text-5xl'>
             {t('conclusion')}.

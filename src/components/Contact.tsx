@@ -21,9 +21,9 @@ const Contact = async () => {
     <div id='contact'>
       <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-4 py-24 md:px-24'>
         <Reveal className='flex flex-col items-center gap-8'>
-          <div className='flex items-center gap-4 font-mono text-[2rem] text-blue-500 uppercase lg:text-[2.5rem] dark:text-teal-500'>
+          <h2 className='m-0 flex items-center gap-4 font-mono text-[2rem] font-normal text-blue-500 uppercase lg:text-[2.5rem] dark:text-teal-500'>
             {t('title')}
-          </div>
+          </h2>
           <div className='flex flex-col items-center justify-center gap-12'>
             <div className='flex flex-col'>
               <p className='text-center text-sm md:text-base'>{t('description')}</p>
