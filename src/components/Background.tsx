@@ -1,20 +1,21 @@
-import { Flex, useColorMode } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+'use client';
+
+import { useTheme } from 'next-themes';
 import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import type { Engine } from 'tsparticles-engine';
 
-const Hero = () => {
-  const { t } = useTranslation('hero');
-  const { colorMode } = useColorMode();
+const Background = () => {
+  const { resolvedTheme } = useTheme();
+  const particleColor = resolvedTheme === 'light' ? '#333' : '#aaa';
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
 
   return (
-    <Flex position='absolute' left={0} right={0} top={0} bottom={0}>
+    <div className='absolute inset-0'>
       <Particles
         id='tsparticles'
         init={particlesInit}
@@ -25,69 +26,40 @@ const Hero = () => {
               onHover: {
                 enable: true,
                 mode: 'grab',
-                parallax: {
-                  enable: true,
-                  smooth: 10,
-                  force: 15,
-                },
+                parallax: { enable: true, smooth: 10, force: 15 },
               },
               resize: true,
             },
-            modes: {
-              grab: {
-                distance: 300,
-                line_linked: {
-                  opacity: 0.075,
-                },
-              },
-            },
+            modes: { grab: { distance: 300, line_linked: { opacity: 0.075 } } },
           },
           particles: {
-            color: {
-              value: colorMode === 'dark' ? '#aaa' : '#333',
-            },
+            color: { value: particleColor },
             links: {
-              color: colorMode === 'dark' ? '#aaa' : '#333',
+              color: particleColor,
               distance: 150,
               enable: true,
               opacity: 0.075,
               width: 1,
             },
-            collisions: {
-              enable: true,
-            },
+            collisions: { enable: true },
             move: {
               direction: 'none',
               enable: true,
-              outModes: {
-                default: 'bounce',
-              },
+              outModes: { default: 'bounce' },
               random: false,
               speed: 1,
               straight: false,
             },
-            number: {
-              density: {
-                enable: true,
-                area: 800,
-              },
-              value: 100,
-            },
-            opacity: {
-              value: 0.075,
-            },
-            shape: {
-              type: 'circle',
-            },
-            size: {
-              value: { min: 1, max: 2 },
-            },
+            number: { density: { enable: true, area: 800 }, value: 100 },
+            opacity: { value: 0.075 },
+            shape: { type: 'circle' },
+            size: { value: { min: 1, max: 2 } },
           },
           detectRetina: true,
         }}
       />
-    </Flex>
+    </div>
   );
 };
 
-export default Hero;
+export default Background;

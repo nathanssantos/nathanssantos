@@ -1,0 +1,100 @@
+{
+  "about": {
+    "title": "Sobre",
+    "description": "Desenvolvedor fullstack que entrega de ponta a ponta — de frontends com React e React Native a APIs Node.js e PostgreSQL. Foco em design systems, infraestrutura de frontend, developer experience e desenvolvimento potencializado por IA. Atualmente construindo o MarketMind, plataforma desktop de trading algorítmico com Electron, Canvas API e mais de 7.200 testes automatizados.",
+    "list-title": "Tecnologias que tenho utilizado"
+  },
+  "common": {
+    "view-more": "Ver mais"
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Estou aberto a novas oportunidades — seja uma vaga CLT/PJ, projeto freelance ou consultoria.",
+    "description-2": "Envie uma mensagem e responderei em breve.",
+    "button-label": "Entrar em contato"
+  },
+  "experience": {
+    "title": "Experiência",
+    "list": {
+      "clint": {
+        "description-1": "Plataforma de CRM e automação de vendas utilizada por milhares de empresas no Brasil. Focada em envio de mensagens em alto volume, gestão de pipeline e colaboração entre equipes.",
+        "description-2": "Liderei a migração de React 16→19, criei o design system com Chakra UI 3 substituindo Bootstrap 4, e entreguei funcionalidades-chave como Assinaturas, Pagamentos, Permissões, Chat, Automações e integrações com IA. Também atualizei o backend Node.js, configurei o monorepo e estabeleci a infraestrutura de testes (unitários + e2e)."
+      },
+      "rokkos": {
+        "description-1": "Marketplace para fotógrafos onde eles exibem, vendem e entregam suas fotos durante eventos. A plataforma também utiliza reconhecimento facial para ajudar clientes a encontrar fotos nas quais estão presentes.",
+        "description-2": "Liderei o time que criou a Rokkos do zero, construí todo o front-end e auxiliei os designers a desenvolverem diversas funcionalidades com o intuito de melhorar a experiência do usuário."
+      },
+      "tag": {
+        "description-1": "A Transportadora Associada de Gás S.A. (TAG) atua no segmento de transporte de gás natural por meio de gasodutos. A TAG é proprietária e gestora de importante parcela dos ativos de transporte de gás natural do país, distribuídos entre as regiões Norte, Nordeste e Sudeste,",
+        "description-2": "Desenvolvi o front-end do site institucional da TAG levando em conta as melhores práticas de SEO e seguindo o style guide da Engie."
+      },
+      "turno-inverso": {
+        "description-1": "Turno Inverso é um app que conecta alunos com professores de esporte, cultura e idiomas em um ambiente seguro e descomplicado.",
+        "description-2": "Liderei o time que criou a aplicação e construí boa parte do front-end."
+      },
+      "lets-hike": {
+        "description-1": "Let's Hike é um aplicativo mobile que oferece informações sobre o ambiente natural de Florianópolis e região, ajudando os usuários a encontrar suporte e a percorrer as trilhas de maneira segura.",
+        "description-2": "Eu fiz parte do time que construiu o aplicativo Let's Hike e auxiliei em melhorias na usabilidade."
+      },
+      "unne": {
+        "description-1": "Plataforma utilizada para análise e gerenciamento de estratégias para crescimento de pequenos e médios negócios.",
+        "description-2": "Desenvolvi o front-end da aplicação e ajudei na criação de diversas funcionalidades durante este processo."
+      },
+      "we-play": {
+        "description-1": "Plataforma que permite que professores e arenas de esportes gerenciem aulas em tempo real.",
+        "description-2": "Fiz parte do time que criou e desenvolveu o We Play."
+      },
+      "plastubos": {
+        "description-1": "Fabricante de tubos e conexões hidráulicas presente no mercado brasileiro há mais de 20 anos.",
+        "description-2": "Fiz parte do time que desenvolveu o site institucional da Plastubos e construí grande parte do front-end."
+      }
+    }
+  },
+  "footer": {
+    "description": "Criado por Nathan S. Santos"
+  },
+  "header": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "resume": "Currículo",
+    "turn-on-the-light": "Acender a luz",
+    "turn-off-the-light": "Apagar a luz",
+    "change-language": "Translate to English"
+  },
+  "hero": {
+    "salutation": "Olá, meu nome é",
+    "name": "Nathan",
+    "conclusion": "Eu crio experiências digitais",
+    "description": "Sou um desenvolvedor de software fullstack com mais de 7 anos de experiência construindo aplicações web e desktop de alta performance.",
+    "description-2": "Especializado em React, TypeScript e Node.js, com foco em design systems e desenvolvimento potencializado por IA — atualmente aberto a novas oportunidades."
+  },
+  "notFound": {
+    "h1": "A página que você procura não foi encontrada ou não pertence a este website!",
+    "title": "Página não encontrada."
+  },
+  "projects": {
+    "title": "Projetos",
+    "list": {
+      "evolution-graph": {
+        "description": "Biblioteca de visualização de dados animada, responsiva e sem dependências. Publicada no npm."
+      },
+      "react-boilerplate": {
+        "description": "Boilerplate para aplicações React com MobX, Chakra UI e Vite."
+      },
+      "podjs": {
+        "description": "Agregador de podcasts open source construído com Next.js, MobX e Chakra UI."
+      },
+      "clockify-teams": {
+        "description": "Dashboard para acompanhamento de performance de equipes usando a API do Clockify."
+      },
+      "pure-components": {
+        "description": "Biblioteca de componentes UI sem dependências com 17 componentes e 99% de cobertura de testes."
+      },
+      "marketmind": {
+        "description": "Aplicativo desktop open-source de trading algorítmico com visualização avançada de gráficos, detecção automática de setups, motor de backtesting e suporte multi-exchange."
+      }
+    }
+  }
+}

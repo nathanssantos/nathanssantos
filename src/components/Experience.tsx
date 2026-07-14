@@ -1,123 +1,65 @@
-import {
-  Container,
-  Flex,
-  Icon,
-  IconButton,
-  Image,
-  Tag,
-  Text,
-  useColorMode,
-} from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
-import { Fade } from 'react-awesome-reveal';
-import { RiExternalLinkLine } from 'react-icons/ri';
-import { experience } from 'src/constants';
+import { getTranslations } from 'next-intl/server';
+
+import { experience } from '../constants';
+import Reveal from './Reveal';
 import SectionHeader from './SectionHeader';
 
-const Experience = () => {
-  const { t } = useTranslation('experience');
-  const { colorMode } = useColorMode();
+const Experience = async () => {
+  const t = await getTranslations('experience');
 
   return (
-    <Flex id='experience' fontFamily='Roboto Mono'>
-      <Container
-        w='full'
-        maxW='container.xl'
-        display='flex'
-        pl={2}
-        pr={{ base: '3.625rem', lg: '8.25rem' }}
-        pt={24}
-        pb={48}
-        fontSize='xs'
-      >
-        <Flex align='flex-start' gap={{ base: 3.5, lg: 7 }}>
-          <Flex position='sticky' top='5rem'>
+    <div id='experience' className='font-mono'>
+      <div className='mx-auto flex w-full max-w-7xl pt-24 pr-[3.625rem] pb-48 pl-2 text-xs lg:pr-[8.25rem]'>
+        <div className='flex items-start gap-3.5 lg:gap-7'>
+          <div className='sticky top-20 flex'>
             <SectionHeader>{t('title')}</SectionHeader>
-          </Flex>
-          <Flex gap={6} direction='column'>
-            <Fade cascade triggerOnce duration={200}>
-              {experience.map((item) => (
-                <Flex
-                  as='a'
+          </div>
+          <div className='flex flex-col gap-6'>
+            {experience.map((item, index) => (
+              <Reveal key={item.key} delay={index * 100}>
+                <a
                   href={item.url}
                   target='_blank'
-                  key={item.key}
-                  direction={{ base: 'column', md: 'row' }}
-                  py={{ base: 12, md: 8 }}
-                  pl={{ base: 8, md: 16 }}
-                  pr={8}
-                  gap={16}
-                  align='flex-start'
-                  bg={
-                    colorMode === 'dark'
-                      ? 'rgba(42, 42, 42, 0.75)'
-                      : 'rgba(230, 230, 230, 0.75)'
-                  }
-                  backdropFilter='blur(0.313rem)'
-                  borderRadius='md'
-                  role='group'
-                  transition='0.2s'
-                  _hover={{
-                    shadow: 'xl',
-                    transform: 'translateY(-0.25rem)',
-                  }}
+                  rel='noreferrer'
+                  className='group flex flex-col items-start gap-16 rounded-md bg-[rgba(230,230,230,0.75)] py-12 pr-8 pl-8 backdrop-blur-[5px] transition duration-200 hover:-translate-y-1 hover:shadow-xl md:flex-row md:py-8 md:pl-16 dark:bg-[rgba(42,42,42,0.75)]'
                 >
-                  <Flex
-                    w={{ base: 28, md: 32 }}
-                    minW={{ base: 28, md: 32 }}
-                    alignSelf={{ base: 'center' }}
-                  >
-                    <Image
+                  <div className='w-28 min-w-28 self-center md:w-32 md:min-w-32'>
+                    <img
                       alt={`${item.name} logo`}
                       src={item.logo}
-                      h='100%'
-                      w='100%'
-                      objectFit='contain'
-                      filter={
-                        item.logo.endsWith('.svg') && colorMode === 'dark'
-                          ? 'brightness(0) invert(1)'
-                          : undefined
-                      }
+                      className={`h-full w-full object-contain${
+                        item.logo.endsWith('.svg')
+                          ? ' dark:[filter:brightness(0)_invert(1)]'
+                          : ''
+                      }`}
                     />
-                  </Flex>
-                  <Flex direction='column' w='full'>
-                    <Text
-                      mb={6}
-                      fontSize='xl'
-                      fontWeight='bold'
-                      transition='0.2s'
-                      _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
-                    >
+                  </div>
+                  <div className='flex w-full flex-col'>
+                    <p className='mb-6 text-xl font-bold transition duration-200 group-hover:text-blue-500 dark:group-hover:text-teal-500'>
                       {item.name}
-                    </Text>
-                    <Text mb={2}>{t(`list.${item.key}.description-1`)}</Text>
-                    <Text
-                      mb={6}
-                      transition='0.2s'
-                      _groupHover={{ color: colorMode === 'dark' ? 'teal.500' : 'blue.500' }}
-                    >
+                    </p>
+                    <p className='mb-2'>{t(`list.${item.key}.description-1`)}</p>
+                    <p className='mb-6 transition duration-200 group-hover:text-blue-500 dark:group-hover:text-teal-500'>
                       {t(`list.${item.key}.description-2`)}
-                    </Text>
-                    <Flex gap={2} wrap='wrap'>
+                    </p>
+                    <div className='flex flex-wrap gap-2'>
                       {item.tags.map((tag) => (
-                        <Tag
+                        <span
                           key={tag}
-                          bg={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-                          color={colorMode === 'dark' ? '#222' : '#fff'}
-                          size='sm'
+                          className='rounded px-2 py-0.5 text-[#fff] bg-blue-500 dark:bg-teal-500 dark:text-[#222]'
                         >
                           {tag}
-                        </Tag>
+                        </span>
                       ))}
-                    </Flex>
-                  </Flex>
-                </Flex>
-              ))}
-            </Fade>
-          </Flex>
-        </Flex>
-      </Container>
-    </Flex>
+                    </div>
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

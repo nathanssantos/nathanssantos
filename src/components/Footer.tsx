@@ -1,18 +1,16 @@
-import { Flex, Text } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
-import { Fade } from 'react-awesome-reveal';
+import { getTranslations } from 'next-intl/server';
 
-const Footer = () => {
-  const { t } = useTranslation('footer');
+import Reveal from './Reveal';
+
+const Footer = async () => {
+  const t = await getTranslations('footer');
 
   return (
-    <Flex as='footer' align='center' justify='center' py={16} px={4}>
-      <Fade triggerOnce duration={200}>
-        <Text as='p' fontSize='xs' fontFamily='Roboto Mono' textAlign='center'>
-          {t('description')}
-        </Text>
-      </Fade>
-    </Flex>
+    <footer className='flex items-center justify-center px-4 py-16'>
+      <Reveal>
+        <p className='text-center font-mono text-xs'>{t('description')}</p>
+      </Reveal>
+    </footer>
   );
 };
 

@@ -1,0 +1,100 @@
+{
+  "about": {
+    "title": "About",
+    "description": "Fullstack engineer who ships end-to-end — from React and React Native frontends to Node.js APIs and PostgreSQL. Focused on design systems, frontend infrastructure, developer experience, and AI-assisted development. Currently building MarketMind, an algorithmic trading desktop platform with Electron, Canvas API, and 7,200+ automated tests.",
+    "list-title": "The technologies I’ve been working with recently"
+  },
+  "common": {
+    "view-more": "View more"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "I'm currently open to new opportunities — whether it's a full-time role, freelance project, or consulting work.",
+    "description-2": "Drop me a message and I'll get back to you promptly.",
+    "button-label": "Get in touch"
+  },
+  "experience": {
+    "title": "Experience",
+    "list": {
+      "clint": {
+        "description-1": "CRM and sales automation platform serving thousands of businesses across Brazil. Built for high-volume messaging, pipeline management, and team collaboration.",
+        "description-2": "Led the React 16→19 migration, built a Chakra UI 3 design system replacing Bootstrap 4, and shipped key features including Subscriptions, Payments, Permissions, Chat, Automations, and AI integrations. Also upgraded the Node.js backend, set up monorepo tooling, and established the testing infrastructure (unit + e2e)."
+      },
+      "rokkos": {
+        "description-1": "Marketplace for photographers where they show, sell and deliver their photos during events. The platform also uses facial recognition to help customers find photos in which they are present.",
+        "description-2": "I led the team that created Rokkos from scratch, built the front-end, and helped the designers to develop several features to improve user experience."
+      },
+      "tag": {
+        "description-1": "Transportadora Associada de Gás S.A. (TAG) operates in the natural gas transportation segment through gas pipelines. TAG owns and manages a significant portion of Brazil's natural gas transport assets, distributed among the North, Northeast, and Southeast regions.",
+        "description-2": "I developed the front-end of TAG's institutional website taking into account the best SEO practices and following Engie's style guide."
+      },
+      "turno-inverso": {
+        "description-1": "Turno Inverso is a mobile application that connects students with sports, culture and language teachers on a smooth and safe environment.",
+        "description-2": "I led the team that built the Turno Inverso mobile app and developed much of the front-end."
+      },
+      "lets-hike": {
+        "description-1": "Let's Hike is a mobile application that offers information about the natural environment of Florianópolis and the region, guiding users to find support and walk the trails safely.",
+        "description-2": "I participated in the construction of the Let's Hike mobile app and helped the team improve several usability and performance features of the application."
+      },
+      "unne": {
+        "description-1": "Platform used for analysis and management of growth strategies for small and medium businesses.",
+        "description-2": "I developed the front-end of Unne's progressive web app and helped the team identify several improvements that should be applied throughout this process."
+      },
+      "we-play": {
+        "description-1": "A platform that allows teachers and arenas to manage classes and students in real-time.",
+        "description-2": "I was part of the team that created and developed We Play."
+      },
+      "plastubos": {
+        "description-1": "A manufacturer of pipes and hydraulic connections present in the brazilian market for over 20 years.",
+        "description-2": "I was part of the team that developed the company institutional website and built much of the front-end."
+      }
+    }
+  },
+  "footer": {
+    "description": "Created by Nathan S. Santos"
+  },
+  "header": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume",
+    "turn-on-the-light": "Turn on the light",
+    "turn-off-the-light": "Turn off the light",
+    "change-language": "Traduzir para Português"
+  },
+  "hero": {
+    "salutation": "Hi, my name is",
+    "name": "Nathan",
+    "conclusion": "I build digital experiences",
+    "description": "I’m a fullstack software engineer with 7+ years of experience building high-performance web and desktop applications.",
+    "description-2": "Specialized in React, TypeScript, and Node.js, with a focus on design systems and AI-assisted development — currently open to new opportunities."
+  },
+  "notFound": {
+    "h1": "The page you are looking for is not available or doesn't belong to this website!",
+    "title": "Page not found"
+  },
+  "projects": {
+    "title": "Projects",
+    "list": {
+      "evolution-graph": {
+        "description": "Animated, responsive, dependency-free data visualization library. Published on npm."
+      },
+      "react-boilerplate": {
+        "description": "Boilerplate for React applications with MobX, Chakra UI, and Vite."
+      },
+      "podjs": {
+        "description": "An open source podcast app built with Next.js, MobX, and Chakra UI."
+      },
+      "clockify-teams": {
+        "description": "Dashboard for tracking team performance across projects using the Clockify API."
+      },
+      "pure-components": {
+        "description": "Dependency-free UI component library with 17 components and 99% test coverage."
+      },
+      "marketmind": {
+        "description": "Open-source algorithmic trading desktop app with advanced chart visualization, automated setup detection, backtesting engine, and multi-exchange support."
+      }
+    }
+  }
+}

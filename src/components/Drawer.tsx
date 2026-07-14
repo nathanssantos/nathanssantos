@@ -1,40 +1,43 @@
-import {
-  Drawer as ChakraDrawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerOverlay,
-  Icon,
-  IconButton,
-  useColorMode,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { RiMenuLine } from 'react-icons/ri';
-import { Menu } from '.';
+'use client';
+
+import { useState } from 'react';
+import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
+
+import Menu from './Menu';
 
 const Drawer = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode } = useColorMode();
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <IconButton
-        variant='ghost'
-        size='sm'
+      <button
+        type='button'
         aria-label='Menu'
-        color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-        icon={<Icon as={RiMenuLine} w={4} h={4} />}
-        onClick={onOpen}
-      />
-      <ChakraDrawer isOpen={isOpen} placement='left' onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent boxShadow='0px 8px 20px -2px rgba(0, 0, 0, 0.08)'>
-          <DrawerCloseButton />
-          <DrawerBody pt={8}>
+        onClick={() => setOpen(true)}
+        className='rounded-md p-1.5 text-blue-500 dark:text-teal-500'
+      >
+        <RiMenuLine className='h-4 w-4' />
+      </button>
+      {open && (
+        <div className='fixed inset-0 z-50' role='dialog' aria-modal='true'>
+          <div
+            className='absolute inset-0 bg-black/40'
+            onClick={() => setOpen(false)}
+            aria-hidden='true'
+          />
+          <div className='absolute top-0 left-0 h-full w-64 bg-[#f0f0f0] p-6 shadow-[0px_8px_20px_-2px_rgba(0,0,0,0.08)] dark:bg-[#222]'>
+            <button
+              type='button'
+              aria-label='Close'
+              onClick={() => setOpen(false)}
+              className='mb-8 rounded-md p-1.5 text-blue-500 dark:text-teal-500'
+            >
+              <RiCloseLine className='h-5 w-5' />
+            </button>
             <Menu vertical />
-          </DrawerBody>
-        </DrawerContent>
-      </ChakraDrawer>
+          </div>
+        </div>
+      )}
     </>
   );
 };

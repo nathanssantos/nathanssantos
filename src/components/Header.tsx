@@ -1,148 +1,86 @@
-import {
-  Button,
-  Flex,
-  Icon,
-  IconButton,
-  Menu as ChakraMenu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
-  Tooltip,
-  useColorMode,
-} from '@chakra-ui/react';
-import { observer } from 'mobx-react';
-import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-import { Fade } from 'react-awesome-reveal';
+'use client';
+
+import { useLocale, useTranslations } from 'next-intl';
+import { useTheme } from 'next-themes';
 import { RiMoonLine, RiSunLine, RiTranslate } from 'react-icons/ri';
-import { useStore } from 'src/hooks';
-import { Drawer, Menu } from '.';
+
+import { usePathname, useRouter } from '../i18n/navigation';
+import { useLogoVisible } from '../store/logo';
+import Drawer from './Drawer';
+import Menu from './Menu';
 
 const Header = () => {
-  const { t, i18n } = useTranslation('header');
-  const { colorMode, toggleColorMode } = useColorMode();
-  const { uiStore } = useStore();
+  const t = useTranslations('header');
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const { resolvedTheme, setTheme } = useTheme();
+  const logoVisible = useLogoVisible();
 
-  const { isOpen } = uiStore.logo;
+  const isDark = resolvedTheme !== 'light';
+  const isPt = locale === 'pt';
 
-  const handleToggleLanguage = () => {
-    i18n.changeLanguage(i18n.language?.startsWith('pt') ? 'en' : 'pt');
-  };
-
-  const scrollTop = () => {
-    window.scrollTo(0, 0);
+  const toggleLanguage = () => {
+    router.replace(pathname, { locale: isPt ? 'en' : 'pt' });
   };
 
   return (
-    <Flex
-      as='header'
-      position='sticky'
-      top={0}
-      align='center'
-      justify='space-between'
-      py={4}
-      px={4}
-      gap={2}
-      bg={colorMode === 'dark' ? 'rgba(34, 34, 34, 0.75)' : 'rgba(240, 240, 240, 0.75)'}
-      backdropFilter='blur(0.313rem)'
-      zIndex={1}
-    >
-      <Flex align='center'>
-        <Flex align='center'>
-          <Flex
-            ml={{ base: isOpen ? 0 : '-1.625rem', md: isOpen ? 0 : '-2.625rem' }}
-            mr={isOpen ? 6 : 0}
-            opacity={isOpen ? 1 : 0}
-            overflow='hidden'
-            transition='.2s ease-in-out'
-            cursor='pointer'
-            onClick={scrollTop}
+    <header className='sticky top-0 z-10 flex items-center justify-between gap-2 bg-[rgba(240,240,240,0.75)] px-4 py-4 backdrop-blur-[5px] dark:bg-[rgba(34,34,34,0.75)]'>
+      <div className='flex items-center'>
+        <div className='flex items-center'>
+          <button
+            type='button'
+            onClick={() => window.scrollTo(0, 0)}
+            className={`overflow-hidden transition-all duration-200 ${
+              logoVisible
+                ? 'mr-6 ml-0 opacity-100'
+                : '-ml-[1.625rem] opacity-0 md:-ml-[2.625rem]'
+            }`}
+            aria-label='Scroll to top'
           >
-            <Text
-              fontSize='4xl'
-              fontWeight='bold'
-              lineHeight={1}
-              background={
-                colorMode === 'dark'
-                  ? 'linear-gradient( 120deg, var(--chakra-colors-teal-500) 30%, var(--chakra-colors-blue-500) 60%)'
-                  : 'linear-gradient( 120deg, var(--chakra-colors-blue-500) 40%, var(--chakra-colors-teal-500) 80%)'
-              }
-              sx={{
-                backgroundClip: 'text',
-                textFillColor: 'transparent',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
+            <span className='bg-clip-text text-4xl leading-none font-bold text-transparent [background-image:linear-gradient(120deg,#5374fa_40%,#64ffda_80%)] dark:[background-image:linear-gradient(120deg,#64ffda_30%,#5374fa_60%)]'>
               N
-            </Text>
-          </Flex>
-          <Flex display={{ md: 'none' }}>
+            </span>
+          </button>
+          <div className='md:hidden'>
             <Drawer />
-          </Flex>
-        </Flex>
-        <Flex display={{ base: 'none', md: 'flex' }}>
+          </div>
+        </div>
+        <div className='hidden md:flex'>
           <Menu />
-        </Flex>
-      </Flex>
-      <Flex align='center' gap={2}>
-        <Fade cascade triggerOnce duration={200} delay={1200}>
-          <Tooltip hasArrow label={t('change-language')} offset={[0, 16]}>
-            <Button
-              variant='ghost'
-              leftIcon={<Icon as={RiTranslate} w={4} h={4} />}
-              size='sm'
-              fontWeight={400}
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-              overflow='hidden'
-              alignItems='flex-start'
-              role='group'
-              onClick={handleToggleLanguage}
+        </div>
+      </div>
+      <div className='flex items-center gap-2'>
+        <button
+          type='button'
+          onClick={toggleLanguage}
+          aria-label={t('change-language')}
+          title={t('change-language')}
+          className='flex items-center gap-1 overflow-hidden rounded-md px-3 py-1.5 text-sm text-blue-500 dark:text-teal-500'
+        >
+          <RiTranslate className='h-4 w-4' />
+          <span className='flex h-8 flex-col overflow-hidden'>
+            <span
+              className='flex flex-col transition-transform duration-200'
+              style={{ transform: `translateY(${isPt ? '-2rem' : '0'})` }}
             >
-              <Flex
-                direction='column'
-                transform={`translateY(${i18n.language?.startsWith('pt') ? '-50%' : '0'})`}
-                transition='0.2s ease'
-                _groupHover={{
-                  transform: `translateY(${i18n.language?.startsWith('pt') ? '0' : '-50%'})`,
-                }}
-              >
-                <Flex h={8} align='center'>
-                  EN
-                </Flex>
-                <Flex h={8} align='center'>
-                  PT
-                </Flex>
-              </Flex>
-            </Button>
-          </Tooltip>
-          <Tooltip
-            hasArrow
-            label={colorMode === 'light' ? t('turn-off-the-light') : t('turn-on-the-light')}
-            offset={[0, 16]}
-          >
-            <IconButton
-              variant='ghost'
-              aria-label={
-                colorMode === 'light' ? t('turn-off-the-light') : t('turn-on-the-light')
-              }
-              size='sm'
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-              icon={
-                colorMode === 'light' ? (
-                  <Icon as={RiMoonLine} w={4} h={4} />
-                ) : (
-                  <Icon as={RiSunLine} w={4} h={4} />
-                )
-              }
-              onClick={toggleColorMode}
-            />
-          </Tooltip>
-        </Fade>
-      </Flex>
-    </Flex>
+              <span className='flex h-8 items-center'>EN</span>
+              <span className='flex h-8 items-center'>PT</span>
+            </span>
+          </span>
+        </button>
+        <button
+          type='button'
+          onClick={() => setTheme(isDark ? 'light' : 'dark')}
+          aria-label={isDark ? t('turn-on-the-light') : t('turn-off-the-light')}
+          title={isDark ? t('turn-on-the-light') : t('turn-off-the-light')}
+          className='rounded-md p-1.5 text-blue-500 dark:text-teal-500'
+        >
+          {isDark ? <RiSunLine className='h-4 w-4' /> : <RiMoonLine className='h-4 w-4' />}
+        </button>
+      </div>
+    </header>
   );
 };
 
-export default observer(Header);
+export default Header;

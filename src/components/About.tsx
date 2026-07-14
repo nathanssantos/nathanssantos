@@ -1,89 +1,57 @@
-import { Avatar, Container, Flex, Text, useColorMode } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
-import { useRef } from 'react';
-import { Fade } from 'react-awesome-reveal';
+import { getTranslations } from 'next-intl/server';
+
+import Reveal from './Reveal';
 import SectionHeader from './SectionHeader';
 
-const About = () => {
-  const { t } = useTranslation('about');
-  const { colorMode } = useColorMode();
-  const avatarRef = useRef(null);
+const technologies = [
+  'TypeScript',
+  'React / React Native',
+  'Next.js',
+  'Electron',
+  'Node.js',
+  'Fastify / tRPC',
+  'PostgreSQL',
+  'Canvas API',
+  'Vitest / Cypress',
+  'Chakra UI',
+  'Zustand / MobX',
+  'pnpm Monorepo',
+];
+
+const About = async () => {
+  const t = await getTranslations('about');
 
   return (
-    <Flex id='about'>
-      <Container
-        w='full'
-        maxW='container.xl'
-        display='flex'
-        pl={2}
-        pr={{ base: '3.625rem', lg: '8.25rem' }}
-        pt={24}
-        pb={48}
-        gap={{ base: 2, lg: 7 }}
-        fontSize={{ base: 'xs', lg: 'sm' }}
-      >
-        <Flex align='flex-start' gap={{ base: 3.5, lg: 7 }}>
-          <Flex position='sticky' top='5rem'>
+    <div id='about'>
+      <div className='mx-auto flex w-full max-w-7xl gap-2 pt-24 pr-[3.625rem] pb-48 pl-2 text-xs lg:gap-7 lg:pr-[8.25rem] lg:text-sm'>
+        <div className='flex items-start gap-3.5 lg:gap-7'>
+          <div className='sticky top-20 flex'>
             <SectionHeader>{t('title')}</SectionHeader>
-          </Flex>
-          <Flex gap={4} direction='column'>
-            <Fade cascade triggerOnce duration={200}>
-              <Avatar
-                w='100%'
-                h='100%'
-                maxW='10rem'
-                src='/images/me.jpg'
-                filter='grayscale(100%) contrast(1.25)'
-                borderRadius={0}
-                // alignSelf={{ base: 'center', md: 'flex-start' }}
-                ref={avatarRef}
-              />
-              <Flex direction='column' gap={4}>
-                <Text>{t('description')}</Text>
-                <Text>{t('list-title')}:</Text>
-                <Flex
-                  as='ul'
-                  direction='column'
-                  wrap='wrap'
-                  maxH={{ base: '7rem', lg: '8.5rem' }}
-                  maxW='30rem'
-                  gap={1}
-                  columnGap={6}
-                >
-                  {[
-                    'TypeScript',
-                    'React / React Native',
-                    'Next.js',
-                    'Electron',
-                    'Node.js',
-                    'Fastify / tRPC',
-                    'PostgreSQL',
-                    'Canvas API',
-                    'Vitest / Cypress',
-                    'Chakra UI',
-                    'Zustand / MobX',
-                    'pnpm Monorepo',
-                  ].map((tech) => (
-                    <Flex
-                      key={tech}
-                      as='li'
-                      gap={1}
-                      align='center'
-                      _before={{
-                        content: `"▹"`,
-                        color: colorMode === 'dark' ? 'teal.500' : 'blue.500',
-                      }}
-                    >
-                      {tech}
-                    </Flex>
-                  ))}
-                </Flex>
-              </Flex>
-            </Fade>
-          </Flex>
-        </Flex>
-      </Container>
-    </Flex>
+          </div>
+          <Reveal className='flex flex-col gap-4'>
+            <img
+              src='/images/me.jpg'
+              alt='Nathan S. Santos'
+              className='h-full w-full max-w-40 [filter:grayscale(100%)_contrast(1.25)]'
+            />
+            <div className='flex flex-col gap-4'>
+              <p>{t('description')}</p>
+              <p>{t('list-title')}:</p>
+              <ul className='flex max-h-28 max-w-[30rem] flex-col flex-wrap gap-1 gap-x-6 lg:max-h-[8.5rem]'>
+                {technologies.map((tech) => (
+                  <li
+                    key={tech}
+                    className="flex items-center gap-1 before:text-blue-500 before:content-['▹'] dark:before:text-teal-500"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
   );
 };
 
