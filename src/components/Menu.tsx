@@ -2,6 +2,8 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 
+import { site } from '../constants';
+
 type MenuProps = {
   vertical?: boolean;
 };
@@ -13,8 +15,7 @@ const Menu = ({ vertical = false }: MenuProps) => {
   const t = useTranslations('header');
   const locale = useLocale();
 
-  const resumeHref =
-    locale === 'pt' ? '/CV-Nathan_Silva_Santos-PT.pdf' : '/Resume-Nathan_Silva_Santos.pdf';
+  const resumeHref = locale === 'pt' ? site.resume.pt : site.resume.en;
 
   const items = [
     { id: 'about', label: t('about') },

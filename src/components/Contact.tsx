@@ -1,22 +1,17 @@
 import { getTranslations } from 'next-intl/server';
 import { RiGithubLine, RiInstagramLine, RiLinkedinLine, RiMailLine } from 'react-icons/ri';
 
+import { site } from '../constants';
 import ButtonLink from './ButtonLink';
 import Reveal from './Reveal';
 
+const mailHref = `mailto:${site.email}`;
+
 const socialLinks = [
-  { label: 'Github', href: 'https://github.com/nathanssantos/', Icon: RiGithubLine },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/nathanssantosdev/',
-    Icon: RiInstagramLine,
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/nathan-s-santos-4b2637163/',
-    Icon: RiLinkedinLine,
-  },
-  { label: 'E-mail', href: 'mailto:nathansilvasantos@gmail.com', Icon: RiMailLine },
+  { label: 'Github', href: site.social.github, Icon: RiGithubLine },
+  { label: 'Instagram', href: site.social.instagram, Icon: RiInstagramLine },
+  { label: 'LinkedIn', href: site.social.linkedin, Icon: RiLinkedinLine },
+  { label: 'E-mail', href: mailHref, Icon: RiMailLine },
 ];
 
 const Contact = async () => {
@@ -51,7 +46,7 @@ const Contact = async () => {
                 );
               })}
             </div>
-            <ButtonLink href='mailto:nathansilvasantos@gmail.com' className='font-mono'>
+            <ButtonLink href={mailHref} className='font-mono'>
               {t('button-label')}
             </ButtonLink>
           </div>

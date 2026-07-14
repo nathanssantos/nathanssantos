@@ -19,9 +19,7 @@ const robotoMono = Roboto_Mono({
 
 const ogLocales: Record<string, string> = { en: 'en_US', pt: 'pt_BR' };
 
-type LayoutParams = { params: Promise<{ locale: string }> };
-
-export const generateMetadata = async ({ params }: LayoutParams): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: LocalePageProps): Promise<Metadata> => {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
   const title = t('title');
@@ -57,9 +55,8 @@ export const generateMetadata = async ({ params }: LayoutParams): Promise<Metada
 
 export const generateStaticParams = () => routing.locales.map((locale) => ({ locale }));
 
-type LocaleLayoutProps = {
+type LocaleLayoutProps = LocalePageProps & {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
 };
 
 const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {

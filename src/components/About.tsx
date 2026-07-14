@@ -1,23 +1,9 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
+import { technologies } from '../constants';
 import Reveal from './Reveal';
 import Section from './Section';
-
-const technologies = [
-  'TypeScript',
-  'React / React Native',
-  'Next.js',
-  'Electron',
-  'Node.js',
-  'Fastify / tRPC',
-  'PostgreSQL',
-  'Canvas API',
-  'Vitest / Cypress',
-  'Chakra UI',
-  'Zustand / MobX',
-  'pnpm Monorepo',
-];
 
 const About = async () => {
   const t = await getTranslations('about');

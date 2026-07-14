@@ -1,1 +1,7 @@
-type FetchStatus = 'idle' | 'fetching' | 'error' | 'success' | 'empty' | 'timeout';
+type LocaleParams = {
+  locale: string;
+};
+
+type LocalePageProps = {
+  params: Promise<LocaleParams>;
+};
