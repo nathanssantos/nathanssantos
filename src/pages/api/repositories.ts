@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-type Message = { message: String };
+type Message = { message: string };
 
 type Data = Repository[] | Message;
 
