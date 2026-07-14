@@ -5,20 +5,18 @@ import { experience } from '../constants';
 import Reveal from './Reveal';
 import Section from './Section';
 
+const baseCardClassName =
+  'group flex w-full flex-col items-start gap-16 rounded-md bg-[rgba(230,230,230,0.75)] py-12 pr-8 pl-8 backdrop-blur-[5px] transition duration-200 hover:-translate-y-1 hover:shadow-xl md:flex-row md:py-8 md:pl-16 dark:bg-[rgba(42,42,42,0.75)]';
+
 const Experience = async () => {
   const t = await getTranslations('experience');
 
   return (
     <Section id='experience' title={t('title')} className='font-mono text-xs'>
       <div className='flex flex-col gap-6'>
-        {experience.map((item, index) => (
-          <Reveal key={item.key} delay={index * 100}>
-            <a
-              href={item.url}
-              target='_blank'
-              rel='noreferrer'
-              className='group flex w-full flex-col items-start gap-16 rounded-md bg-[rgba(230,230,230,0.75)] py-12 pr-8 pl-8 backdrop-blur-[5px] transition duration-200 hover:-translate-y-1 hover:shadow-xl md:flex-row md:py-8 md:pl-16 dark:bg-[rgba(42,42,42,0.75)]'
-            >
+        {experience.map((item, index) => {
+          const content = (
+            <>
               <div className='relative h-16 w-28 min-w-28 self-center md:h-20 md:w-32 md:min-w-32'>
                 <Image
                   alt={`${item.name} logo`}
@@ -49,9 +47,26 @@ const Experience = async () => {
                   ))}
                 </div>
               </div>
-            </a>
-          </Reveal>
-        ))}
+            </>
+          );
+
+          return (
+            <Reveal key={item.key} delay={index * 100}>
+              {item.url ? (
+                <a
+                  href={item.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={`${baseCardClassName} cursor-pointer`}
+                >
+                  {content}
+                </a>
+              ) : (
+                <div className={`${baseCardClassName} cursor-default`}>{content}</div>
+              )}
+            </Reveal>
+          );
+        })}
       </div>
     </Section>
   );
