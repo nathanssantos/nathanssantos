@@ -1,5 +1,5 @@
 import { Flex, Text } from '@chakra-ui/react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import { Fade } from 'react-awesome-reveal';
 
 const Footer = () => {

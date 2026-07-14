@@ -1,6 +1,6 @@
 import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { observer } from 'mobx-react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useStore } from 'src/hooks';

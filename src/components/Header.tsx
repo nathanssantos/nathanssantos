@@ -12,8 +12,7 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 import { observer } from 'mobx-react';
-import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { RiMoonLine, RiSunLine, RiTranslate } from 'react-icons/ri';
@@ -21,16 +20,14 @@ import { useStore } from 'src/hooks';
 import { Drawer, Menu } from '.';
 
 const Header = () => {
-  const { t } = useTranslation('header');
-  const router = useRouter();
+  const { t, i18n } = useTranslation('header');
   const { colorMode, toggleColorMode } = useColorMode();
   const { uiStore } = useStore();
 
   const { isOpen } = uiStore.logo;
 
   const handleToggleLanguage = () => {
-    const { pathname, asPath, query } = router;
-    router.push({ pathname, query }, asPath, { locale: router.locale === 'pt' ? 'en' : 'pt' });
+    i18n.changeLanguage(i18n.language?.startsWith('pt') ? 'en' : 'pt');
   };
 
   const scrollTop = () => {
@@ -105,10 +102,10 @@ const Header = () => {
             >
               <Flex
                 direction='column'
-                transform={`translateY(${router?.locale === 'pt' ? '-50%' : '0'})`}
+                transform={`translateY(${i18n.language?.startsWith('pt') ? '-50%' : '0'})`}
                 transition='0.2s ease'
                 _groupHover={{
-                  transform: `translateY(${router?.locale === 'en' ? '-50%' : '0'})`,
+                  transform: `translateY(${i18n.language?.startsWith('pt') ? '0' : '-50%'})`,
                 }}
               >
                 <Flex h={8} align='center'>
