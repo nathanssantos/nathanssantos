@@ -10,9 +10,7 @@ export const alt = site.name;
 
 export const generateStaticParams = () => routing.locales.map((locale) => ({ locale }));
 
-type OgImageProps = { params: Promise<{ locale: string }> };
-
-const OpengraphImage = async ({ params }: OgImageProps) => {
+const OpengraphImage = async ({ params }: LocalePageProps) => {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
 

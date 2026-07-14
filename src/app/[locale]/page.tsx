@@ -8,20 +8,12 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
 import Projects from '../../components/Projects';
-
-const favoriteRepositories = [
-  'evolution-graph',
-  'react-boilerplate',
-  'podjs',
-  'clockify-teams',
-  'pure-components',
-  'marketmind',
-];
+import { favoriteRepositories, site } from '../../constants';
 
 const getRepositories = async (): Promise<Repository[]> => {
   try {
     const response = await fetch(
-      'https://api.github.com/users/nathanssantos/repos?per_page=100',
+      `https://api.github.com/users/${site.githubUsername}/repos?per_page=100`,
       {
         headers: { Accept: 'application/vnd.github+json' },
         next: { revalidate: 3600 },
@@ -40,11 +32,7 @@ const getRepositories = async (): Promise<Repository[]> => {
   }
 };
 
-type HomePageProps = {
-  params: Promise<{ locale: string }>;
-};
-
-const HomePage = async ({ params }: HomePageProps) => {
+const HomePage = async ({ params }: LocalePageProps) => {
   const { locale } = await params;
   setRequestLocale(locale);
 

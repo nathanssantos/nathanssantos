@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { RiExternalLinkLine, RiGithubLine, RiStarLine } from 'react-icons/ri';
 
+import { site } from '../constants';
 import ButtonLink from './ButtonLink';
 import Reveal from './Reveal';
 import Section from './Section';
@@ -48,7 +49,7 @@ const Projects = async ({ projects }: ProjectsProps) => {
                     </a>
                   )}
                   <a
-                    href={`https://github.com/nathanssantos/${item.name}`}
+                    href={`https://github.com/${site.githubUsername}/${item.name}`}
                     target='_blank'
                     rel='noreferrer'
                     aria-label='Github Link'
@@ -65,7 +66,7 @@ const Projects = async ({ projects }: ProjectsProps) => {
       <div className='mt-8 flex justify-center'>
         <Reveal>
           <ButtonLink
-            href='https://github.com/nathanssantos?tab=repositories'
+            href={`https://github.com/${site.githubUsername}?tab=repositories`}
             target='_blank'
             rel='noreferrer'
           >
