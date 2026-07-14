@@ -14,7 +14,7 @@
 
 <p align="center">
   Fullstack Software Engineer with 7+ years of experience building high-performance web and desktop applications.<br />
-  Focused on design systems, frontend infrastructure, developer experience, AI-assisted development, and AI agent orchestration.
+  Specialized in React, TypeScript, and Node.js — currently open to new opportunities.
 </p>
 
 <br />
