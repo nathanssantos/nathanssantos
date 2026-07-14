@@ -1,100 +1,56 @@
-import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
-import { observer } from 'mobx-react';
-import { useTranslation } from 'next-i18next';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
-import { Fade } from 'react-awesome-reveal';
-import { useStore } from 'src/hooks';
+
+import { setLogoVisible } from '../store/logo';
+import Reveal from './Reveal';
 
 const Hero = () => {
-  const { t } = useTranslation('hero');
-  const { colorMode } = useColorMode();
-  const { uiStore } = useStore();
-  const nameRef = useRef(null);
-
-  const { logo } = uiStore;
+  const t = useTranslations('hero');
+  const nameRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    if (!nameRef.current) return;
+    const element = nameRef.current;
 
-    const nameElement = nameRef.current;
+    if (!element) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => logo.toggle(entry.isIntersecting));
-      },
+      ([entry]) => setLogoVisible(entry.isIntersecting),
       {
-        root: null,
         threshold: 0,
       },
     );
 
-    observer.observe(nameElement);
+    observer.observe(element);
 
-    return () => {
-      observer.unobserve(nameElement);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <Flex position='relative' height='calc(100vh - 4.25rem)'>
-      <Container
-        w='full'
-        maxW='container.xl'
-        display='flex'
-        flexDirection='column'
-        justifyContent='center'
-        px={{ base: '3.625rem', lg: '8.25rem' }}
-        pt={8}
-        pb={48}
-      >
-        <Flex flexDirection='column' justifyContent='center'>
-          <Fade cascade triggerOnce duration={200} delay={1600}>
-            <Text
-              fontSize={{ base: 'md', md: 'lg' }}
-              fontWeight={500}
-              fontFamily='Roboto Mono'
-              color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-              mb={{ base: 1, md: 2 }}
+    <div className='relative flex h-[calc(100vh-4.25rem)]'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col justify-center px-[3.625rem] pt-8 pb-48 lg:px-[8.25rem]'>
+        <Reveal className='flex flex-col justify-center'>
+          <p className='mb-1 font-mono text-base font-medium text-blue-500 md:mb-2 md:text-lg dark:text-teal-500'>
+            {t('salutation')}
+          </p>
+          <div className='mb-2 -ml-[0.15rem] flex'>
+            <h1
+              ref={nameRef}
+              className='m-0 bg-clip-text text-5xl leading-none font-black text-transparent [background-image:linear-gradient(120deg,#5374fa_50%,#64ffda_90%)] md:text-7xl dark:[background-image:linear-gradient(120deg,#64ffda_20%,#5374fa_60%)]'
             >
-              {t('salutation')}
-            </Text>
-            <Flex ml='-0.15rem' mb={2}>
-              <Text
-                ref={nameRef}
-                fontSize={{ base: '5xl', md: '7xl' }}
-                fontWeight='black'
-                lineHeight={1}
-                background={
-                  colorMode === 'dark'
-                    ? 'linear-gradient( 120deg, var(--chakra-colors-teal-500) 20%, var(--chakra-colors-blue-500) 60%)'
-                    : 'linear-gradient( 120deg, var(--chakra-colors-blue-500) 50%, var(--chakra-colors-teal-500) 90%)'
-                }
-                sx={{
-                  backgroundClip: 'text',
-                  textFillColor: 'transparent',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                {t('name')}.
-              </Text>
-            </Flex>
-            <Text
-              fontSize={{ base: '2xl', md: '5xl' }}
-              fontWeight='black'
-              lineHeight={1}
-              mb={{ base: 3, md: 6 }}
-              ml='-0.05rem'
-            >
-              {t('conclusion')}.
-            </Text>
-            <Text fontSize={{ base: 'sm', md: 'md' }}>{t('description')}</Text>
-            <Text fontSize={{ base: 'sm', md: 'md' }}>{t('description-2')}</Text>
-          </Fade>
-        </Flex>
-      </Container>
-    </Flex>
+              {t('name')}.
+            </h1>
+          </div>
+          <p className='mb-3 -ml-[0.05rem] text-2xl leading-none font-black md:mb-6 md:text-5xl'>
+            {t('conclusion')}.
+          </p>
+          <p className='text-sm md:text-base'>{t('description')}</p>
+          <p className='text-sm md:text-base'>{t('description-2')}</p>
+        </Reveal>
+      </div>
+    </div>
   );
 };
 
-export default observer(Hero);
+export default Hero;

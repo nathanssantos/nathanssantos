@@ -1,28 +1,13 @@
-import { Container, Flex, Text, useColorMode } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 
 type SectionHeaderProps = {
-  children: ReactElement | ReactElement[] | string;
-  center?: boolean;
+  children: ReactNode;
 };
 
-const SectionHeader = ({ children, center = false }: SectionHeaderProps) => {
-  const { colorMode } = useColorMode();
-
-  return (
-    <Flex
-      align='center'
-      gap={4}
-      fontSize={{ base: '1.75rem', lg: '4rem' }}
-      color={colorMode === 'dark' ? 'teal.500' : 'blue.500'}
-      sx={{ writingMode: 'vertical-lr' }}
-      transform='rotate(180deg)'
-      textTransform='uppercase'
-      fontFamily='Roboto Mono'
-    >
-      {children}
-    </Flex>
-  );
-};
+const SectionHeader = ({ children }: SectionHeaderProps) => (
+  <h2 className='m-0 flex rotate-180 items-center gap-4 font-mono text-[1.75rem] font-normal text-blue-500 uppercase [writing-mode:vertical-lr] lg:text-[4rem] dark:text-teal-500'>
+    {children}
+  </h2>
+);
 
 export default SectionHeader;
