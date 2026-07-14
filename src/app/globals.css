@@ -1,6 +1,4 @@
-@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/utilities.css' layer(utilities);
+@import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -8,6 +6,21 @@
   --color-blue-500: #5374fa;
   --color-teal-500: #64ffda;
   --color-gray-800: #444444;
-  --font-sans: Inter, sans-serif;
-  --font-mono: 'Roboto Mono', sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-roboto-mono), monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f0f0f0;
+    font-family: var(--font-sans);
+  }
+
+  .dark body {
+    background-color: #222222;
+  }
 }
