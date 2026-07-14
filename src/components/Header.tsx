@@ -4,7 +4,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { RiMoonLine, RiSunLine, RiTranslate } from 'react-icons/ri';
 
-import { usePathname, useRouter } from '../i18n/navigation';
 import { useLogoVisible } from '../store/logo';
 import Drawer from './Drawer';
 import Menu from './Menu';
@@ -12,8 +11,6 @@ import Menu from './Menu';
 const Header = () => {
   const t = useTranslations('header');
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
   const logoVisible = useLogoVisible();
 
@@ -21,7 +18,9 @@ const Header = () => {
   const isPt = locale === 'pt';
 
   const toggleLanguage = () => {
-    router.replace(pathname, { locale: isPt ? 'en' : 'pt' });
+    const nextLocale = isPt ? 'en' : 'pt';
+
+    window.location.href = `/${nextLocale}${window.location.hash}`;
   };
 
   return (
