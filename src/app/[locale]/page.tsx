@@ -8,7 +8,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
 import Projects from '../../components/Projects';
-import { favoriteRepositories, site } from '../../constants';
+import { fallbackRepositories, favoriteRepositories, site } from '../../constants';
 
 const getRepositories = async (): Promise<Repository[]> => {
   try {
@@ -37,6 +37,7 @@ const HomePage = async ({ params }: LocalePageProps) => {
   setRequestLocale(locale);
 
   const repositories = await getRepositories();
+  const projects = repositories.length > 0 ? repositories : fallbackRepositories;
 
   return (
     <>
@@ -46,7 +47,7 @@ const HomePage = async ({ params }: LocalePageProps) => {
         <Hero />
         <About />
         <Experience />
-        {repositories.length > 0 && <Projects projects={repositories} />}
+        <Projects projects={projects} />
         <Contact />
       </main>
       <Footer />
