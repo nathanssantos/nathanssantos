@@ -1,7 +1,23 @@
 import { getTranslations } from 'next-intl/server';
 import { RiGithubLine, RiInstagramLine, RiLinkedinLine, RiMailLine } from 'react-icons/ri';
 
+import ButtonLink from './ButtonLink';
 import Reveal from './Reveal';
+
+const socialLinks = [
+  { label: 'Github', href: 'https://github.com/nathanssantos/', Icon: RiGithubLine },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/nathanssantosdev/',
+    Icon: RiInstagramLine,
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/nathan-s-santos-4b2637163/',
+    Icon: RiLinkedinLine,
+  },
+  { label: 'E-mail', href: 'mailto:nathansilvasantos@gmail.com', Icon: RiMailLine },
+];
 
 const Contact = async () => {
   const t = await getTranslations('contact');
@@ -19,47 +35,25 @@ const Contact = async () => {
               <p className='text-center text-sm md:text-base'>{t('description-2')}</p>
             </div>
             <div className='flex items-center gap-4 text-blue-500 dark:text-teal-500'>
-              <a
-                aria-label='Github'
-                href='https://github.com/nathanssantos/'
-                target='_blank'
-                rel='noreferrer'
-                className='p-2 text-2xl'
-              >
-                <RiGithubLine />
-              </a>
-              <a
-                aria-label='Instagram'
-                href='https://www.instagram.com/nathanssantosdev/'
-                target='_blank'
-                rel='noreferrer'
-                className='p-2 text-2xl'
-              >
-                <RiInstagramLine />
-              </a>
-              <a
-                aria-label='LinkedIn'
-                href='https://www.linkedin.com/in/nathan-s-santos-4b2637163/'
-                target='_blank'
-                rel='noreferrer'
-                className='p-2 text-2xl'
-              >
-                <RiLinkedinLine />
-              </a>
-              <a
-                aria-label='E-mail'
-                href='mailto:nathansilvasantos@gmail.com'
-                className='p-2 text-2xl'
-              >
-                <RiMailLine />
-              </a>
+              {socialLinks.map(({ label, href, Icon }) => {
+                const isExternal = href.startsWith('http');
+
+                return (
+                  <a
+                    key={label}
+                    aria-label={label}
+                    href={href}
+                    className='p-2 text-2xl'
+                    {...(isExternal ? { target: '_blank', rel: 'noreferrer' } : {})}
+                  >
+                    <Icon />
+                  </a>
+                );
+              })}
             </div>
-            <a
-              href='mailto:nathansilvasantos@gmail.com'
-              className='rounded-md border border-blue-500 px-4 py-2 font-mono text-blue-500 transition hover:bg-blue-500/10 dark:border-teal-500 dark:text-teal-500 dark:hover:bg-teal-500/10'
-            >
+            <ButtonLink href='mailto:nathansilvasantos@gmail.com' className='font-mono'>
               {t('button-label')}
-            </a>
+            </ButtonLink>
           </div>
         </Reveal>
       </div>
