@@ -21,7 +21,7 @@ const Projects = async ({ projects }: ProjectsProps) => {
           <Reveal key={item.id} delay={index * 100} className='h-full'>
             <div className='group flex h-full flex-col rounded-md bg-[rgba(230,230,230,0.75)] p-8 backdrop-blur-[5px] transition duration-200 hover:-translate-y-1 hover:shadow-xl dark:bg-[rgba(42,42,42,0.75)]'>
               <div className='mb-6 flex items-start justify-between gap-2 transition duration-200 group-hover:text-blue-500 dark:group-hover:text-teal-500'>
-                <p className='text-lg font-bold'>{item.name}</p>
+                <h3 className='m-0 text-lg font-bold'>{item.name}</h3>
                 {!!item.stargazers_count && (
                   <div className='flex items-center gap-2 text-base'>
                     <RiStarLine className='text-xl' />

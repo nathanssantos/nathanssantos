@@ -29,9 +29,9 @@ const Experience = async () => {
                 />
               </div>
               <div className='flex w-full flex-col'>
-                <p className='mb-6 text-xl font-bold transition duration-200 group-hover:text-blue-500 dark:group-hover:text-teal-500'>
+                <h3 className='m-0 mb-6 text-xl font-bold transition duration-200 group-hover:text-blue-500 dark:group-hover:text-teal-500'>
                   {item.name}
-                </p>
+                </h3>
                 <p className='mb-2'>{t(`list.${item.key}.description-1`)}</p>
                 <p className='mb-6 transition duration-200 group-hover:text-blue-500 dark:group-hover:text-teal-500'>
                   {t(`list.${item.key}.description-2`)}

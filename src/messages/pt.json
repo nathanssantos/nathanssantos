@@ -76,7 +76,13 @@
   },
   "notFound": {
     "h1": "A página que você procura não foi encontrada ou não pertence a este website!",
-    "title": "Página não encontrada."
+    "title": "Página não encontrada.",
+    "back": "Voltar ao início"
+  },
+  "error": {
+    "title": "Algo deu errado",
+    "description": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+    "retry": "Tentar novamente"
   },
   "projects": {
     "title": "Projetos",

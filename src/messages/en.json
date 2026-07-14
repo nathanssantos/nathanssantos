@@ -76,7 +76,13 @@
   },
   "notFound": {
     "h1": "The page you are looking for is not available or doesn't belong to this website!",
-    "title": "Page not found"
+    "title": "Page not found",
+    "back": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
   },
   "projects": {
     "title": "Projects",
