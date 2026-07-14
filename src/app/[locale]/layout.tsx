@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter, Roboto_Mono } from 'next/font/google';
@@ -18,6 +18,10 @@ const robotoMono = Roboto_Mono({
 });
 
 const ogLocales: Record<string, string> = { en: 'en_US', pt: 'pt_BR' };
+
+export const viewport: Viewport = {
+  themeColor: '#222222',
+};
 
 export const generateMetadata = async ({ params }: LocalePageProps): Promise<Metadata> => {
   const { locale } = await params;
