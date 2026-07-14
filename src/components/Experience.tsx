@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import { experience } from '../constants';
@@ -18,12 +19,14 @@ const Experience = async () => {
               rel='noreferrer'
               className='group flex w-full flex-col items-start gap-16 rounded-md bg-[rgba(230,230,230,0.75)] py-12 pr-8 pl-8 backdrop-blur-[5px] transition duration-200 hover:-translate-y-1 hover:shadow-xl md:flex-row md:py-8 md:pl-16 dark:bg-[rgba(42,42,42,0.75)]'
             >
-              <div className='w-28 min-w-28 self-center md:w-32 md:min-w-32'>
-                <img
+              <div className='relative h-16 w-28 min-w-28 self-center md:h-20 md:w-32 md:min-w-32'>
+                <Image
                   alt={`${item.name} logo`}
                   src={item.logo}
-                  className={`h-full w-full object-contain${
-                    item.logo.endsWith('.svg') ? ' dark:[filter:brightness(0)_invert(1)]' : ''
+                  fill
+                  sizes='128px'
+                  className={`object-contain ${
+                    item.logo.endsWith('.svg') ? 'dark:[filter:brightness(0)_invert(1)]' : ''
                   }`}
                 />
               </div>

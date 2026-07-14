@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import Reveal from './Reveal';
@@ -24,10 +25,12 @@ const About = async () => {
   return (
     <Section id='about' title={t('title')} className='text-xs lg:text-sm'>
       <Reveal className='flex flex-col gap-4'>
-        <img
+        <Image
           src='/images/me.jpg'
           alt='Nathan S. Santos'
-          className='w-full max-w-40 [filter:grayscale(100%)_contrast(1.25)]'
+          width={637}
+          height={637}
+          className='h-auto w-full max-w-40 [filter:grayscale(100%)_contrast(1.25)]'
         />
         <div className='flex flex-col gap-4'>
           <p>{t('description')}</p>
