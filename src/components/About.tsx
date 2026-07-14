@@ -1,5 +1,5 @@
 import { Avatar, Container, Flex, Text, useColorMode } from '@chakra-ui/react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import SectionHeader from './SectionHeader';
