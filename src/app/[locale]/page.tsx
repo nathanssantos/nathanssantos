@@ -1,7 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 
 import About from '../../components/About';
-import Background from '../../components/Background';
+import BackgroundLoader from '../../components/BackgroundLoader';
 import Contact from '../../components/Contact';
 import Experience from '../../components/Experience';
 import Footer from '../../components/Footer';
@@ -43,7 +43,7 @@ const HomePage = async ({ params }: LocalePageProps) => {
     <>
       <Header />
       <main>
-        <Background />
+        <BackgroundLoader />
         <Hero />
         <About />
         <Experience />
