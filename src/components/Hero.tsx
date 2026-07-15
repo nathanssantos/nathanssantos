@@ -16,7 +16,7 @@ const Hero = () => {
     if (!element) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => setLogoVisible(entry.isIntersecting),
+      ([entry]) => setLogoVisible(!entry.isIntersecting),
       {
         threshold: 0,
       },
