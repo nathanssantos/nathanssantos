@@ -6,9 +6,6 @@
   </a>&nbsp;
   <a href="https://www.linkedin.com/in/nathan-s-santos-4b2637163/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>&nbsp;
-  <a href="https://nathanssantos.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
   </a>
 </p>
 
